@@ -1,61 +1,35 @@
 ---
 date: YYYY-MM-DD
 affiliate_tag: AFFILIATE_TAG
-tags:
-  - social_media
-  - email_marketing
-  - personal_networking
-  - content_marketing
-  - paid_advertising
+referral_count: 4
+strategies:
+  - [List strategies used, e.g. social media, email, personal networking]
 referral_types:
-  - new_customer
-  - existing_customer
-  - other_affiliate
-referral_methods:
-  - one_on_one_conversation
-  - social_media_post
-  - email_campaign
-  - blog_post
-  - video_content
-  - webinar
+  - [List types of people referred, e.g. new customers, existing customers]
 ---
 
-# Affiliate Submission - YYYY-MM-DD
+# Referral Success Story
 
-## Referral Details
+## What I Did
 
-### Who did you refer?
-[List the types of referrals made]
+[Briefly describe what you did to make these referrals. What was your approach?]
 
-### Referral Methods Used
-[List the methods used for referrals]
+## My Referral Message
 
-## Referral Strategy
+[If you used a specific message or pitch, share it here. For conversations, summarize your key points.]
 
-### Brief Description of Referral Approach
-[Short answer describing what you did]
+## What Worked Best
 
-### Specific Message Used
-[For one-on-one conversations, provide a brief summary of how the conversations went]
+[What parts of your referral strategy were most effective? Why do you think they worked well?]
 
-## Results and Reflections
+## Challenges and Lessons
 
-### Most Effective Aspects
-[Check all that apply from the form responses]
+[Did you face any challenges? What did you learn that could help other affiliates?]
 
-### Key Factors for Sign-ups
-[Short answer on what you think made them sign up]
+## My Top Tip
 
-### Strengths in Referral Process
-[Short answer on what you did well when referring]
+[If you could give one piece of advice to other affiliates, what would it be?]
 
-### Areas for Improvement
-[Short answer on how you could have done better]
+## Additional Notes
 
-## Additional Information
-
-### Screenshots
-[If screenshots were uploaded, mention it here or provide links if applicable]
-
-### Other Notes
-[Any additional information or comments]
+[Any other thoughts, observations, or details you'd like to share?]
