@@ -1,0 +1,27 @@
+name: Update Summaries
+
+on:
+  push:
+    paths:
+      - 'affiliates/*/_submission.md'
+
+jobs:
+  update-summaries:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: pip install pyyaml
+      - name: Update summaries
+        run: python .github/scripts/update_summaries.py
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Update summaries" -a || echo "No changes to commit"
+          git push
