@@ -3,7 +3,7 @@ name: Update Summaries
 on:
   push:
     paths:
-      - 'affiliates/*/_submission.md'
+      - 'affiliates-wins(promotion)/**/*_submission.md'
 
 jobs:
   update-summaries:
