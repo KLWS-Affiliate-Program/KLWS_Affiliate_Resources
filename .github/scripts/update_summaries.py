@@ -26,10 +26,10 @@ def parse_submission_file(file_path: str) -> Submission:
     Read a submission file and extract its data.
     
     Args:
-    file_path (str): Path to the submission file.
+        file_path (str): Path to the submission file.
     
     Returns:
-    Submission: A Submission object containing the parsed data.
+        Submission: A Submission object containing the parsed data.
     """
     try:
         with open(file_path, 'r') as f:
@@ -58,7 +58,7 @@ def get_affiliates_and_submissions() -> Dict[str, List[Submission]]:
     Collect all valid submissions for each affiliate.
     
     Returns:
-    Dict[str, List[Submission]]: A dictionary with affiliate names as keys and lists of their submissions as values.
+        Dict[str, List[Submission]]: A dictionary with affiliate names as keys and lists of their submissions as values.
     """
     affiliates = {}
     with ThreadPoolExecutor() as executor:
@@ -81,15 +81,15 @@ def update_readme_section(content: str, start_marker: str, end_marker: str, new_
     Update a specific section in the README.
     
     Args:
-    content (str): The full content of the README.
-    start_marker (str): The starting marker of the section to update.
-    end_marker (str): The ending marker of the section to update.
-    new_content (str): The new content to insert between the markers.
+        content (str): The entire content of the README.
+        start_marker (str): The starting marker of the section to update.
+        end_marker (str): The ending marker of the section to update.
+        new_content (str): The new content to insert between the markers.
     
     Returns:
-    str: The updated README content.
+        str: The updated README content.
     """
-    pattern = f"({start_marker}).*?({end_marker})"
+    pattern = fr"({re.escape(start_marker)}).*?({re.escape(end_marker)})"
     replacement = f"\\1\n{new_content}\n\\2"
     return re.sub(pattern, replacement, content, flags=re.DOTALL)
 
@@ -98,30 +98,54 @@ def generate_affiliate_table(affiliates: Dict[str, List[Submission]]) -> str:
     Generate the affiliate table content with links to the latest submissions.
     
     Args:
-    affiliates (Dict[str, List[Submission]]): Dictionary of affiliates and their submissions.
+        affiliates (Dict[str, List[Submission]]): Dictionary of affiliates and their submissions.
     
     Returns:
-    str: Markdown formatted table of affiliates, their latest submissions, and total referrals.
+        str: Markdown formatted table of affiliates, their latest submissions, and total referrals.
     """
     table = "| Affiliate | Latest Submission | Total Referrals |\n"
     table += "|-----------|--------------------|-----------------|\n"
     for affiliate, submissions in sorted(affiliates.items(), key=lambda x: sum(s.referral_count for s in x[1]), reverse=True):
         latest_submission = max(submissions, key=lambda x: x.date)
         total_referrals = sum(submission.referral_count for submission in submissions)
-        relative_path = os.path.relpath(latest_submission.file_path, start=os.path.dirname(README_PATH))
+        relative_path = os.path.relpath(latest_submission.file_path, start=os.path.dirname(README_PATH)).replace('\\', '/')
         table += f"| {affiliate} | [{latest_submission.date.strftime(DATE_FORMAT)}]({relative_path}) | {total_referrals} |\n"
     return table
 
-def generate_top_items(items: List[str], n: int = 5) -> str:
+def get_top_items_by_referrals(submissions: List[Submission], attribute: str, n: int = 8) -> str:
     """
-    Generate a list of top n items.
+    Get top n items based on total referrals.
     
     Args:
-    items (List[str]): List of items to count and rank.
-    n (int): Number of top items to return. Default is 5.
+        submissions (List[Submission]): List of all submissions.
+        attribute (str): The attribute to analyze ('referral_methods', 'what_worked_best', or 'how_to_improve').
+        n (int): Number of top items to return. Default is 8.
     
     Returns:
-    str: Markdown formatted list of top n items.
+        str: Markdown formatted list of top items with their referral counts.
+    """
+    item_referrals = {}
+    for submission in submissions:
+        items = getattr(submission, attribute)
+        if isinstance(items, list):
+            for item in items:
+                item_referrals[item] = item_referrals.get(item, 0) + submission.referral_count
+        elif isinstance(items, str) and items:  # For 'how_to_improve'
+            item_referrals[items] = item_referrals.get(items, 0) + submission.referral_count
+    
+    top_items = sorted(item_referrals.items(), key=lambda x: x[1], reverse=True)[:n]
+    return "\n".join(f"- {item} ({referrals} referrals)" for item, referrals in top_items)
+
+def generate_top_items(items: List[str], n: int = 8) -> str:
+    """
+    Generate a list of top n most common items.
+    
+    Args:
+        items (List[str]): List of all items.
+        n (int): Number of top items to return. Default is 8.
+    
+    Returns:
+        str: Markdown formatted list of top items.
     """
     return "\n".join(f"- {item}" for item, _ in Counter(items).most_common(n))
 
@@ -130,10 +154,10 @@ def generate_program_stats(affiliates: Dict[str, List[Submission]]) -> str:
     Generate overall program statistics.
     
     Args:
-    affiliates (Dict[str, List[Submission]]): Dictionary of affiliates and their submissions.
+        affiliates (Dict[str, List[Submission]]): Dictionary of affiliates and their submissions.
     
     Returns:
-    str: Markdown formatted program statistics.
+        str: Markdown formatted list of program statistics.
     """
     total_affiliates = len(affiliates)
     total_referrals = sum(sum(s.referral_count for s in submissions) for submissions in affiliates.values())
@@ -145,21 +169,22 @@ def update_main_readme(affiliates: Dict[str, List[Submission]]) -> None:
     Update the main README with all sections.
     
     Args:
-    affiliates (Dict[str, List[Submission]]): Dictionary of affiliates and their submissions.
+        affiliates (Dict[str, List[Submission]]): Dictionary of affiliates and their submissions.
     """
     try:
         with open(README_PATH, 'r') as f:
             content = f.read()
-
+        
         # Update affiliate list
         content = update_readme_section(content, "<!-- AFFILIATE LIST START -->", "<!-- AFFILIATE LIST END -->", generate_affiliate_table(affiliates))
         
-        # Collect all submissions
+        # Get all submissions sorted by referral count
         all_submissions = [s for submissions in affiliates.values() for s in submissions]
+        all_submissions.sort(key=lambda x: x.referral_count, reverse=True)
         
         # Update top referral methods
         content = update_readme_section(content, "<!-- TOP REFERRAL METHODS START -->", "<!-- TOP REFERRAL METHODS END -->", 
-                                        generate_top_items([method for s in all_submissions for method in s.referral_methods]))
+                                        get_top_items_by_referrals(all_submissions, 'referral_methods'))
         
         # Update most common referral types
         content = update_readme_section(content, "<!-- COMMON REFERRAL TYPES START -->", "<!-- COMMON REFERRAL TYPES END -->", 
@@ -167,11 +192,11 @@ def update_main_readme(affiliates: Dict[str, List[Submission]]) -> None:
         
         # Update what's working best
         content = update_readme_section(content, "<!-- WHATS WORKING BEST START -->", "<!-- WHATS WORKING BEST END -->", 
-                                        generate_top_items([item for s in all_submissions for item in s.what_worked_best]))
+                                        get_top_items_by_referrals(all_submissions, 'what_worked_best'))
         
         # Update areas for improvement
         content = update_readme_section(content, "<!-- AREAS FOR IMPROVEMENT START -->", "<!-- AREAS FOR IMPROVEMENT END -->", 
-                                        generate_top_items([s.how_to_improve for s in all_submissions if s.how_to_improve]))
+                                        get_top_items_by_referrals(all_submissions, 'how_to_improve'))
         
         # Generate tag cloud
         all_tags = [tag for s in all_submissions for tag in (s.referral_methods + s.who_did_you_refer)]
@@ -192,8 +217,8 @@ def update_affiliate_readme(affiliate: str, submissions: List[Submission]) -> No
     Create or update an individual affiliate's README with their submissions and stats.
     
     Args:
-    affiliate (str): Name of the affiliate.
-    submissions (List[Submission]): List of submissions for this affiliate.
+        affiliate (str): Name of the affiliate.
+        submissions (List[Submission]): List of the affiliate's submissions.
     """
     readme_path = os.path.join(AFFILIATES_DIR, affiliate, 'README.md')
     content = f"# {affiliate}'s Submissions\n\n"
@@ -205,7 +230,8 @@ def update_affiliate_readme(affiliate: str, submissions: List[Submission]) -> No
     all_who_did_you_refer = []
 
     for submission in sorted(submissions, key=lambda x: x.date, reverse=True):
-        content += (f"| [{submission.date.strftime(DATE_FORMAT)}]({os.path.relpath(submission.file_path, start=os.path.dirname(readme_path))}) | "
+        relative_path = os.path.relpath(submission.file_path, start=os.path.dirname(readme_path))
+        content += (f"| [{submission.date.strftime(DATE_FORMAT)}]({relative_path}) | "
                     f"{submission.referral_count} | {', '.join(submission.referral_methods)} | {', '.join(submission.who_did_you_refer)} |\n")
         total_referrals += submission.referral_count
         all_referral_methods.extend(submission.referral_methods)
@@ -226,10 +252,7 @@ def main() -> None:
     Main function to orchestrate the README update process.
     """
     try:
-        # Collect all affiliate submissions
         affiliates = get_affiliates_and_submissions()
-        
-        # Update the main README
         update_main_readme(affiliates)
         
         # Update individual affiliate READMEs
