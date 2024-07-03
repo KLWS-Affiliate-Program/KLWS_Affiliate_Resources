@@ -26,6 +26,11 @@ Our automated system will process all submissions and update this README accordi
 [A tag cloud will be generated here based on the most common strategies and referral types]
 Program Statistics
 [Overall program statistics will be displayed here]
+<!-- TAG CLOUD START -->
+
+
+
+<!-- TAG CLOUD END -->
 
 ## Support
 If you need any assistance or have questions about the program, please contact our affiliate support team on [Whatsapp](https://wa.me/message/3IE3FXO3INXHM1).
