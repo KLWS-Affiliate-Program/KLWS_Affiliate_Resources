@@ -7,7 +7,7 @@ from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Define constants for commonly used paths and formats
-AFFILIATES_DIR = 'affiliates-wins(promotion)'
+AFFILIATES_DIR = 'affiliates-wins'
 README_PATH = 'README.md'
 DATE_FORMAT = '%Y-%m-%d'
 
