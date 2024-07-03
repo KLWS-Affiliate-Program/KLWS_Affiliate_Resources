@@ -11,6 +11,10 @@ This repository serves as a central hub for our affiliates to share their referr
 Below is an automatically updated list of our affiliates and their most recent submissions:
 
 <!-- AFFILIATE LIST START -->
+
+| Affiliate | Latest Submission | Total Referrals |
+|-----------|--------------------|-----------------|
+
 <!-- AFFILIATE LIST END -->
 
 Our automated system will process all submissions and update this README accordingly.
