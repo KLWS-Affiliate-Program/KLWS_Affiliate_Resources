@@ -22,12 +22,21 @@ class Submission(NamedTuple):
     how_to_improve: str
 
 def parse_submission_file(file_path: str) -> Submission:
-    """Read a submission file and extract its data."""
+    """
+    Read a submission file and extract its data.
+    
+    Args:
+    file_path (str): Path to the submission file.
+    
+    Returns:
+    Submission: A Submission object containing the parsed data.
+    """
     try:
         with open(file_path, 'r') as f:
             content = f.read()
         frontmatter = yaml.safe_load(content.split('---')[1])
         
+        # Convert date to string if it's a datetime or date object
         date_value = frontmatter['date']
         date_str = date_value.strftime(DATE_FORMAT) if isinstance(date_value, (datetime, date)) else date_value
 
@@ -45,7 +54,12 @@ def parse_submission_file(file_path: str) -> Submission:
         return Submission(datetime.min, file_path, 0, [], [], [], '')
 
 def get_affiliates_and_submissions() -> Dict[str, List[Submission]]:
-    """Collect all valid submissions for each affiliate."""
+    """
+    Collect all valid submissions for each affiliate.
+    
+    Returns:
+    Dict[str, List[Submission]]: A dictionary with affiliate names as keys and lists of their submissions as values.
+    """
     affiliates = {}
     with ThreadPoolExecutor() as executor:
         future_to_file = {
@@ -63,13 +77,32 @@ def get_affiliates_and_submissions() -> Dict[str, List[Submission]]:
     return affiliates
 
 def update_readme_section(content: str, start_marker: str, end_marker: str, new_content: str) -> str:
-    """Update a specific section in the README."""
+    """
+    Update a specific section in the README.
+    
+    Args:
+    content (str): The full content of the README.
+    start_marker (str): The starting marker of the section to update.
+    end_marker (str): The ending marker of the section to update.
+    new_content (str): The new content to insert between the markers.
+    
+    Returns:
+    str: The updated README content.
+    """
     pattern = f"({start_marker}).*?({end_marker})"
     replacement = f"\\1\n{new_content}\n\\2"
     return re.sub(pattern, replacement, content, flags=re.DOTALL)
 
 def generate_affiliate_table(affiliates: Dict[str, List[Submission]]) -> str:
-    """Generate the affiliate table content with links to the latest submissions."""
+    """
+    Generate the affiliate table content with links to the latest submissions.
+    
+    Args:
+    affiliates (Dict[str, List[Submission]]): Dictionary of affiliates and their submissions.
+    
+    Returns:
+    str: Markdown formatted table of affiliates, their latest submissions, and total referrals.
+    """
     table = "| Affiliate | Latest Submission | Total Referrals |\n"
     table += "|-----------|--------------------|-----------------|\n"
     for affiliate, submissions in sorted(affiliates.items(), key=lambda x: sum(s.referral_count for s in x[1]), reverse=True):
@@ -79,41 +112,69 @@ def generate_affiliate_table(affiliates: Dict[str, List[Submission]]) -> str:
         table += f"| {affiliate} | [{latest_submission.date.strftime(DATE_FORMAT)}]({relative_path}) | {total_referrals} |\n"
     return table
 
-def generate_top_items(items: List[str], n: int = 3) -> str:
-    """Generate a list of top n items."""
+def generate_top_items(items: List[str], n: int = 5) -> str:
+    """
+    Generate a list of top n items.
+    
+    Args:
+    items (List[str]): List of items to count and rank.
+    n (int): Number of top items to return. Default is 5.
+    
+    Returns:
+    str: Markdown formatted list of top n items.
+    """
     return "\n".join(f"- {item}" for item, _ in Counter(items).most_common(n))
 
 def generate_program_stats(affiliates: Dict[str, List[Submission]]) -> str:
-    """Generate overall program statistics."""
+    """
+    Generate overall program statistics.
+    
+    Args:
+    affiliates (Dict[str, List[Submission]]): Dictionary of affiliates and their submissions.
+    
+    Returns:
+    str: Markdown formatted program statistics.
+    """
     total_affiliates = len(affiliates)
     total_referrals = sum(sum(s.referral_count for s in submissions) for submissions in affiliates.values())
     avg_referrals = total_referrals / total_affiliates if total_affiliates > 0 else 0
     return f"- Total Affiliates: {total_affiliates}\n- Total Referrals: {total_referrals}\n- Average Referrals per Affiliate: {avg_referrals:.2f}"
 
 def update_main_readme(affiliates: Dict[str, List[Submission]]) -> None:
-    """Update the main README with all sections."""
+    """
+    Update the main README with all sections.
+    
+    Args:
+    affiliates (Dict[str, List[Submission]]): Dictionary of affiliates and their submissions.
+    """
     try:
         with open(README_PATH, 'r') as f:
             content = f.read()
 
-        # Update each section
+        # Update affiliate list
         content = update_readme_section(content, "<!-- AFFILIATE LIST START -->", "<!-- AFFILIATE LIST END -->", generate_affiliate_table(affiliates))
         
-        # Get top 8 affiliates by total referrals
-        top_affiliates = sorted(affiliates.items(), key=lambda x: sum(s.referral_count for s in x[1]), reverse=True)[:8]
-        top_submissions = [s for _, submissions in top_affiliates for s in submissions]
+        # Collect all submissions
+        all_submissions = [s for submissions in affiliates.values() for s in submissions]
         
+        # Update top referral methods
         content = update_readme_section(content, "<!-- TOP REFERRAL METHODS START -->", "<!-- TOP REFERRAL METHODS END -->", 
-                                        generate_top_items([method for s in top_submissions for method in s.referral_methods]))
+                                        generate_top_items([method for s in all_submissions for method in s.referral_methods]))
+        
+        # Update most common referral types
         content = update_readme_section(content, "<!-- COMMON REFERRAL TYPES START -->", "<!-- COMMON REFERRAL TYPES END -->", 
-                                        generate_top_items([ref for s in top_submissions for ref in s.who_did_you_refer]))
+                                        generate_top_items([ref for s in all_submissions for ref in s.who_did_you_refer]))
+        
+        # Update what's working best
         content = update_readme_section(content, "<!-- WHATS WORKING BEST START -->", "<!-- WHATS WORKING BEST END -->", 
-                                        generate_top_items([item for s in top_submissions for item in s.what_worked_best]))
+                                        generate_top_items([item for s in all_submissions for item in s.what_worked_best]))
+        
+        # Update areas for improvement
         content = update_readme_section(content, "<!-- AREAS FOR IMPROVEMENT START -->", "<!-- AREAS FOR IMPROVEMENT END -->", 
-                                        generate_top_items([s.how_to_improve for s in top_submissions if s.how_to_improve]))
+                                        generate_top_items([s.how_to_improve for s in all_submissions if s.how_to_improve]))
         
         # Generate tag cloud
-        all_tags = [tag for s in top_submissions for tag in (s.referral_methods + s.who_did_you_refer)]
+        all_tags = [tag for s in all_submissions for tag in (s.referral_methods + s.who_did_you_refer)]
         tag_cloud = ' '.join(f'{tag}({count})' for tag, count in Counter(all_tags).most_common(20))
         content = update_readme_section(content, "<!-- TAG CLOUD START -->", "<!-- TAG CLOUD END -->", tag_cloud)
         
@@ -127,7 +188,13 @@ def update_main_readme(affiliates: Dict[str, List[Submission]]) -> None:
         print(f"Error updating README: {str(e)}")
 
 def update_affiliate_readme(affiliate: str, submissions: List[Submission]) -> None:
-    """Create or update an individual affiliate's README with their submissions and stats."""
+    """
+    Create or update an individual affiliate's README with their submissions and stats.
+    
+    Args:
+    affiliate (str): Name of the affiliate.
+    submissions (List[Submission]): List of submissions for this affiliate.
+    """
     readme_path = os.path.join(AFFILIATES_DIR, affiliate, 'README.md')
     content = f"# {affiliate}'s Submissions\n\n"
     content += "| Date | Referral Count | Referral Methods | Who Did You Refer |\n"
@@ -155,9 +222,14 @@ def update_affiliate_readme(affiliate: str, submissions: List[Submission]) -> No
         f.write(content)
 
 def main() -> None:
-    """Main function to orchestrate the README update process."""
+    """
+    Main function to orchestrate the README update process.
+    """
     try:
+        # Collect all affiliate submissions
         affiliates = get_affiliates_and_submissions()
+        
+        # Update the main README
         update_main_readme(affiliates)
         
         # Update individual affiliate READMEs
