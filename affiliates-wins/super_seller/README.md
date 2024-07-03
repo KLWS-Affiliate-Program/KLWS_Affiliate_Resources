@@ -1,2 +1,12 @@
-# KLWS_Affiliate_Resources
-This repository documents affiliate successes and thesis samples for King's Lot Writing Service. It includes real earnings examples, client-finding tips, and completed theses. Affiliates can learn from others' wins, get marketing ideas, and see our work quality. Updated regularly, it's a resource to boost your referrals and income.
+# super_seller's Submissions
+
+| Date | Referral Count | Strategies | Referral Types |
+|------|----------------|------------|----------------|
+| 2024-07-15 | 12 | content marketing, affiliate network | new customers, bloggers |
+| 2024-07-01 | 7 | email marketing, webinars | new customers, small businesses |
+
+## Key Stats
+- Total Submissions: 2
+- Total Referrals: 19
+- Top Strategy: content marketing
+- Most Common Referral Type: new customers

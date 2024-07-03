@@ -14,6 +14,9 @@ Below is an automatically updated list of our affiliates and their most recent s
 
 | Affiliate | Latest Submission | Total Referrals |
 |-----------|--------------------|-----------------|
+| digital_guru | 2024-07-18 | 14 |
+| social_butterfly | 2024-07-20 | 17 |
+| super_seller | 2024-07-15 | 19 |
 
 <!-- AFFILIATE LIST END -->
 
