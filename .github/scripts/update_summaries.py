@@ -16,39 +16,36 @@ class Submission(NamedTuple):
     date: datetime
     file_path: str
     referral_count: int
-    strategies: List[str]
-    referral_types: List[str]
+    referral_methods: List[str]
+    who_did_you_refer: List[str]
+    what_worked_best: List[str]
+    how_to_improve: str
 
 def parse_submission_file(file_path: str) -> Submission:
-    """
-    Read a submission file and extract its data.
-    Returns a Submission object or a default one if there's an error.
-    """
+    """Read a submission file and extract its data."""
     try:
         with open(file_path, 'r') as f:
             content = f.read()
         frontmatter = yaml.safe_load(content.split('---')[1])
         
-        # Ensure the date is a string or a datetime object
         date_value = frontmatter['date']
-        if isinstance(date_value, datetime):
-            date_str = date_value.strftime(DATE_FORMAT)
-        elif isinstance(date_value, date):
-            date_str = date_value.strftime(DATE_FORMAT)
-        else:
-            date_str = date_value
+        date_str = date_value.strftime(DATE_FORMAT) if isinstance(date_value, (datetime, date)) else date_value
 
         return Submission(
             date=datetime.strptime(date_str, DATE_FORMAT),
             file_path=file_path,
             referral_count=frontmatter.get('referral_count', 0),
-            strategies=frontmatter.get('strategies', []),
-            referral_types=frontmatter.get('referral_types', [])
+            referral_methods=frontmatter.get('referral_methods', []),
+            who_did_you_refer=frontmatter.get('who_did_you_refer', []),
+            what_worked_best=frontmatter.get('what_worked_best', []),
+            how_to_improve=frontmatter.get('how_to_improve', '')
         )
-    except (IOError, yaml.YAMLError, KeyError, IndexError, ValueError) as e:
-        return Submission(datetime.min, file_path, 0, [], [])
+    except Exception as e:
+        print(f"Error parsing {file_path}: {str(e)}")
+        return Submission(datetime.min, file_path, 0, [], [], [], '')
 
 def get_affiliates_and_submissions() -> Dict[str, List[Submission]]:
+    """Collect all valid submissions for each affiliate."""
     affiliates = {}
     with ThreadPoolExecutor() as executor:
         future_to_file = {
@@ -61,38 +58,68 @@ def get_affiliates_and_submissions() -> Dict[str, List[Submission]]:
             affiliate, file_path = future_to_file[future]
             submission = future.result()
             if submission.referral_count > 0:  # Only add valid submissions
-                if affiliate not in affiliates:
-                    affiliates[affiliate] = []
-                affiliates[affiliate].append(submission)
+                affiliates.setdefault(affiliate, []).append(submission)
     
     return affiliates
 
+def update_readme_section(content: str, start_marker: str, end_marker: str, new_content: str) -> str:
+    """Update a specific section in the README."""
+    pattern = f"({start_marker}).*?({end_marker})"
+    replacement = f"\\1\n{new_content}\n\\2"
+    return re.sub(pattern, replacement, content, flags=re.DOTALL)
+
+def generate_affiliate_table(affiliates: Dict[str, List[Submission]]) -> str:
+    """Generate the affiliate table content with links to the latest submissions."""
+    table = "| Affiliate | Latest Submission | Total Referrals |\n"
+    table += "|-----------|--------------------|-----------------|\n"
+    for affiliate, submissions in sorted(affiliates.items(), key=lambda x: sum(s.referral_count for s in x[1]), reverse=True):
+        latest_submission = max(submissions, key=lambda x: x.date)
+        total_referrals = sum(submission.referral_count for submission in submissions)
+        relative_path = os.path.relpath(latest_submission.file_path, start=os.path.dirname(README_PATH))
+        table += f"| {affiliate} | [{latest_submission.date.strftime(DATE_FORMAT)}]({relative_path}) | {total_referrals} |\n"
+    return table
+
+def generate_top_items(items: List[str], n: int = 3) -> str:
+    """Generate a list of top n items."""
+    return "\n".join(f"- {item}" for item, _ in Counter(items).most_common(n))
+
+def generate_program_stats(affiliates: Dict[str, List[Submission]]) -> str:
+    """Generate overall program statistics."""
+    total_affiliates = len(affiliates)
+    total_referrals = sum(sum(s.referral_count for s in submissions) for submissions in affiliates.values())
+    avg_referrals = total_referrals / total_affiliates if total_affiliates > 0 else 0
+    return f"- Total Affiliates: {total_affiliates}\n- Total Referrals: {total_referrals}\n- Average Referrals per Affiliate: {avg_referrals:.2f}"
+
 def update_main_readme(affiliates: Dict[str, List[Submission]]) -> None:
-    """
-    Update the main README with a table of affiliates, their latest submissions, and total referrals.
-    """
+    """Update the main README with all sections."""
     try:
         with open(README_PATH, 'r') as f:
             content = f.read()
+
+        # Update each section
+        content = update_readme_section(content, "<!-- AFFILIATE LIST START -->", "<!-- AFFILIATE LIST END -->", generate_affiliate_table(affiliates))
         
-        new_content = "<!-- AFFILIATE LIST START -->\n\n"
-        new_content += "| Affiliate | Latest Submission | Total Referrals |\n"
-        new_content += "|-----------|--------------------|-----------------|\n"
+        # Get top 8 affiliates by total referrals
+        top_affiliates = sorted(affiliates.items(), key=lambda x: sum(s.referral_count for s in x[1]), reverse=True)[:8]
+        top_submissions = [s for _, submissions in top_affiliates for s in submissions]
         
-        for affiliate, submissions in sorted(affiliates.items()):
-            latest_submission = max(submissions, key=lambda x: x.date)
-            total_referrals = sum(submission.referral_count for submission in submissions)
-            new_content += f"| {affiliate} | {latest_submission.date.strftime(DATE_FORMAT)} | {total_referrals} |\n"
+        content = update_readme_section(content, "<!-- TOP REFERRAL METHODS START -->", "<!-- TOP REFERRAL METHODS END -->", 
+                                        generate_top_items([method for s in top_submissions for method in s.referral_methods]))
+        content = update_readme_section(content, "<!-- COMMON REFERRAL TYPES START -->", "<!-- COMMON REFERRAL TYPES END -->", 
+                                        generate_top_items([ref for s in top_submissions for ref in s.who_did_you_refer]))
+        content = update_readme_section(content, "<!-- WHATS WORKING BEST START -->", "<!-- WHATS WORKING BEST END -->", 
+                                        generate_top_items([item for s in top_submissions for item in s.what_worked_best]))
+        content = update_readme_section(content, "<!-- AREAS FOR IMPROVEMENT START -->", "<!-- AREAS FOR IMPROVEMENT END -->", 
+                                        generate_top_items([s.how_to_improve for s in top_submissions if s.how_to_improve]))
         
-        new_content += "\n<!-- AFFILIATE LIST END -->"
+        # Generate tag cloud
+        all_tags = [tag for s in top_submissions for tag in (s.referral_methods + s.who_did_you_refer)]
+        tag_cloud = ' '.join(f'{tag}({count})' for tag, count in Counter(all_tags).most_common(20))
+        content = update_readme_section(content, "<!-- TAG CLOUD START -->", "<!-- TAG CLOUD END -->", tag_cloud)
         
-        content = re.sub(
-            r'<!-- AFFILIATE LIST START -->.*?<!-- AFFILIATE LIST END -->',
-            new_content,
-            content,
-            flags=re.DOTALL
-        )
-        
+        # Update program stats
+        content = update_readme_section(content, "<!-- PROGRAM STATS START -->", "<!-- PROGRAM STATS END -->", generate_program_stats(affiliates))
+
         with open(README_PATH, 'w') as f:
             f.write(content)
         
@@ -100,71 +127,42 @@ def update_main_readme(affiliates: Dict[str, List[Submission]]) -> None:
         print(f"Error updating README: {str(e)}")
 
 def update_affiliate_readme(affiliate: str, submissions: List[Submission]) -> None:
-    """
-    Create or update an individual affiliate's README with their submissions and stats.
-    """
+    """Create or update an individual affiliate's README with their submissions and stats."""
     readme_path = os.path.join(AFFILIATES_DIR, affiliate, 'README.md')
     content = f"# {affiliate}'s Submissions\n\n"
-    content += "| Date | Referral Count | Strategies | Referral Types |\n"
-    content += "|------|----------------|------------|----------------|\n"
+    content += "| Date | Referral Count | Referral Methods | Who Did You Refer |\n"
+    content += "|------|----------------|------------------|--------------------|\n"
 
     total_referrals = 0
-    all_strategies = []
-    all_referral_types = []
+    all_referral_methods = []
+    all_who_did_you_refer = []
 
     for submission in sorted(submissions, key=lambda x: x.date, reverse=True):
-        content += (f"| {submission.date.strftime(DATE_FORMAT)} | {submission.referral_count} | "
-                    f"{', '.join(submission.strategies)} | {', '.join(submission.referral_types)} |\n")
+        content += (f"| [{submission.date.strftime(DATE_FORMAT)}]({os.path.relpath(submission.file_path, start=os.path.dirname(readme_path))}) | "
+                    f"{submission.referral_count} | {', '.join(submission.referral_methods)} | {', '.join(submission.who_did_you_refer)} |\n")
         total_referrals += submission.referral_count
-        all_strategies.extend(submission.strategies)
-        all_referral_types.extend(submission.referral_types)
+        all_referral_methods.extend(submission.referral_methods)
+        all_who_did_you_refer.extend(submission.who_did_you_refer)
 
     content += f"\n## Key Stats\n"
     content += f"- Total Submissions: {len(submissions)}\n"
     content += f"- Total Referrals: {total_referrals}\n"
-    content += f"- Top Strategy: {Counter(all_strategies).most_common(1)[0][0] if all_strategies else 'N/A'}\n"
-    content += f"- Most Common Referral Type: {Counter(all_referral_types).most_common(1)[0][0] if all_referral_types else 'N/A'}\n"
+    content += f"- Top Referral Method: {Counter(all_referral_methods).most_common(1)[0][0] if all_referral_methods else 'N/A'}\n"
+    content += f"- Most Common Referral Type: {Counter(all_who_did_you_refer).most_common(1)[0][0] if all_who_did_you_refer else 'N/A'}\n"
 
     os.makedirs(os.path.dirname(readme_path), exist_ok=True)
     with open(readme_path, 'w') as f:
         f.write(content)
 
-def generate_tag_cloud(affiliates: Dict[str, List[Submission]]) -> None:
-    """
-    Generate a tag cloud from all strategies and referral types and add it to the main README.
-    """
-    all_tags = [tag for submissions in affiliates.values() for submission in submissions for tag in (submission.strategies + submission.referral_types)]
-    
-    tag_counts = Counter(all_tags)
-    tag_cloud = ' '.join(f'{tag}({count})' for tag, count in tag_counts.most_common(20))
-
-    with open(README_PATH, 'r') as f:
-        content = f.read()
-
-    new_content = f"<!-- TAG CLOUD START -->\n\n{tag_cloud}\n\n<!-- TAG CLOUD END -->"
-    
-    content = re.sub(
-        r'<!-- TAG CLOUD START -->.*?<!-- TAG CLOUD END -->',
-        new_content,
-        content,
-        flags=re.DOTALL
-    )
-
-    with open(README_PATH, 'w') as f:
-        f.write(content)
-
 def main() -> None:
-    """
-    Main function to orchestrate the README update process.
-    """
+    """Main function to orchestrate the README update process."""
     try:
         affiliates = get_affiliates_and_submissions()
         update_main_readme(affiliates)
         
+        # Update individual affiliate READMEs
         with ThreadPoolExecutor() as executor:
             executor.map(lambda x: update_affiliate_readme(*x), affiliates.items())
-        
-        generate_tag_cloud(affiliates)
         
     except Exception as e:
         print(f"An unexpected error occurred: {str(e)}")
