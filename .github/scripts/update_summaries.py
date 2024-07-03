@@ -95,7 +95,7 @@ def update_readme_section(content: str, start_marker: str, end_marker: str, new_
 
 def generate_affiliate_table(affiliates: Dict[str, List[Submission]]) -> str:
     """
-    Generate the affiliate table content with links to the latest submissions.
+    Generate the affiliate table content with links to affiliate directories and their latest submissions.
     
     Args:
         affiliates (Dict[str, List[Submission]]): Dictionary of affiliates and their submissions.
@@ -108,8 +108,14 @@ def generate_affiliate_table(affiliates: Dict[str, List[Submission]]) -> str:
     for affiliate, submissions in sorted(affiliates.items(), key=lambda x: sum(s.referral_count for s in x[1]), reverse=True):
         latest_submission = max(submissions, key=lambda x: x.date)
         total_referrals = sum(submission.referral_count for submission in submissions)
-        relative_path = os.path.relpath(latest_submission.file_path, start=os.path.dirname(README_PATH)).replace('\\', '/')
-        table += f"| {affiliate} | [{latest_submission.date.strftime(DATE_FORMAT)}]({relative_path}) | {total_referrals} |\n"
+        
+        # Create relative paths for affiliate directory and latest submission
+        affiliate_dir = os.path.relpath(os.path.join(AFFILIATES_DIR, affiliate), start=os.path.dirname(README_PATH)).replace('\\', '/')
+        submission_path = os.path.relpath(latest_submission.file_path, start=os.path.dirname(README_PATH)).replace('\\', '/')
+        
+        # Create table row with linked affiliate name and latest submission
+        table += f"| [{affiliate}]({affiliate_dir}) | [{latest_submission.date.strftime(DATE_FORMAT)}]({submission_path}) | {total_referrals} |\n"
+    
     return table
 
 def get_top_items_by_referrals(submissions: List[Submission], attribute: str, n: int = 8) -> str:
