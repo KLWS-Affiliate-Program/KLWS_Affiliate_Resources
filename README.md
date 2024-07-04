@@ -16,6 +16,7 @@ Below is an automatically updated list of our affiliates and their most recent s
 | [social_butterfly](affiliates-wins/social_butterfly) | [2024-07-20](affiliates-wins/social_butterfly/2024-07-20_submission.md) | 26 |
 | [super_seller](affiliates-wins/super_seller) | [2024-07-15](affiliates-wins/super_seller/2024-07-15_submission.md) | 19 |
 | [digital_guru](affiliates-wins/digital_guru) | [2024-07-18](affiliates-wins/digital_guru/2024-07-18_submission.md) | 14 |
+| [mandy - 999](affiliates-wins/mandy - 999) | [2024-06-30](affiliates-wins/mandy - 999/2024-06-30_submission.md) | 1 |
 
 <!-- AFFILIATE LIST END -->
 
@@ -72,6 +73,8 @@ spending excessive time. Consider starting a LinkedIn newsletter for deeper netw
  (7 referrals)
 - Thoroughly vet influencers and align on expectations beforehand. Consider creating a podcast to further establish authority in the productivity space.
  (5 referrals)
+- show them my balance
+ (1 referrals)
 <!-- AREAS FOR IMPROVEMENT END -->
 
 ## Tag Cloud
@@ -81,9 +84,9 @@ new customers(4) LinkedIn networking(2) Twitter chats(2) B2B clients(2) freelanc
 
 ## Program Statistics
 <!-- PROGRAM STATS START -->
-- Total Affiliates: 3
-- Total Referrals: 59
-- Average Referrals per Affiliate: 19.67
+- Total Affiliates: 4
+- Total Referrals: 60
+- Average Referrals per Affiliate: 15.00
 <!-- PROGRAM STATS END -->
 
 ## Support
