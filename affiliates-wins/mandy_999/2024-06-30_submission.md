@@ -1,6 +1,6 @@
 ---
 date: 2024-06-30
-affiliate_tag: mandy - 999
+affiliate_tag: mandy_999
 referral_count: 1
 
 # Referral Details
