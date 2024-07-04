@@ -7,5 +7,5 @@
 ## Key Stats
 - Total Submissions: 1
 - Total Referrals: 1
-- Top Referral Method: One-on-One Conversation, Telegram
-- Most Common Referral Type: Friend, Family, Social Media Follower / Status Viewer
+- Top Referral Method: One-on-One Conversation
+- Most Common Referral Type: Friend
