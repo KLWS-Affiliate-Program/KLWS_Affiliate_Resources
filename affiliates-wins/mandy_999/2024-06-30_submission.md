@@ -5,13 +5,16 @@ referral_count: 1
 
 # Referral Details
 who_did_you_refer:
-  - Friend, Family, Social Media Follower / Status Viewer
+  - Friend
+  - Family
+  - Social Media Follower / Status Viewer
 
 brief_description: |
   no
 
 referral_methods:
-  - One-on-One Conversation, Telegram
+  - One-on-One Conversation
+  - Telegram
 
 specific_message: |
   
@@ -21,7 +24,9 @@ conversation_summary: |
 
 # Your Thoughts
 what_worked_best:
-  - Knowing them well, Explaining why the program is good, Helping them understand the program more
+  - Knowing them well
+  - Explaining why the program is good
+  - Helping them understand the program more
 
 why_they_signed_up: |
   Sapa
