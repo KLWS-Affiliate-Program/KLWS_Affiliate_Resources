@@ -71,15 +71,13 @@ spending excessive time. Consider starting a LinkedIn newsletter for deeper netw
  (9 referrals)
 - Offer a valuable freebie to increase webinar attendance.
  (7 referrals)
-- show them my balance
- (6 referrals)
 - Thoroughly vet influencers and align on expectations beforehand. Consider creating a podcast to further establish authority in the productivity space.
  (5 referrals)
 <!-- AREAS FOR IMPROVEMENT END -->
 
 ## Tag Cloud
 <!-- TAG CLOUD START -->
-new customers(4) LinkedIn networking(2) Twitter chats(2) B2B clients(2) freelancers(2) content marketing(1) affiliate network(1) bloggers(1) case studies(1) guest blogging(1) enterprise clients(1) startups(1) paid advertising(1) retargeting campaigns(1) professionals(1) email marketing(1) webinars(1) small businesses(1) One-on-One Conversation(1) Telegram(1)
+new customers(4) LinkedIn networking(2) Twitter chats(2) B2B clients(2) freelancers(2) content marketing(1) affiliate network(1) bloggers(1) case studies(1) guest blogging(1) enterprise clients(1) startups(1) paid advertising(1) retargeting campaigns(1) professionals(1) email marketing(1) webinars(1) small businesses(1) social media marketing(1) influencer partnerships(1)
 <!-- TAG CLOUD END -->
 
 ## Program Statistics
