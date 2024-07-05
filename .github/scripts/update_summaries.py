@@ -15,64 +15,88 @@ DATE_FORMAT = '%Y-%m-%d'
 class Submission(NamedTuple):
     date: datetime
     file_path: str
+    affiliate_tag: str
     referral_count: int
-    referral_methods: List[str]
     who_did_you_refer: List[str]
+    brief_description: str
+    referral_methods: List[str]
+    specific_message: str
+    conversation_summary: List[str]
     what_worked_best: List[str]
+    why_they_signed_up: str
+    what_you_did_well: str
     how_to_improve: str
 
 def parse_submission_file(file_path: str) -> Submission:
     """
-    Read a submission file and extract its data.
+    Parse a submission file and extract its data into a Submission object.
     
     Args:
         file_path (str): Path to the submission file.
     
     Returns:
-        Submission: A Submission object containing the parsed data.
+        Submission: A Submission object containing the parsed data or default values if parsing fails.
     """
     try:
+        # Read file content and split into frontmatter and main content
         with open(file_path, 'r') as f:
-            content = f.read()
-        frontmatter = yaml.safe_load(content.split('---')[1])
+            parts = f.read().split('---', 2)
         
-        # Convert date to string if it's a datetime or date object
-        date_value = frontmatter['date']
-        date_str = date_value.strftime(DATE_FORMAT) if isinstance(date_value, (datetime, date)) else date_value
+        # Parse YAML frontmatter
+        frontmatter = yaml.safe_load(parts[1])
+        
+        # Parse markdown sections into a dictionary
+        sections = {section.split('\n')[0].strip(): '\n'.join(section.split('\n')[1:]).strip() 
+                    for section in re.split(r'##\s+', parts[2]) if section.strip()}
 
+        # Handle date parsing for both string and date object inputs
+        date_value = frontmatter['date']
+        submission_date = (datetime.strptime(date_value, DATE_FORMAT) if isinstance(date_value, str)
+                           else datetime.combine(date_value, datetime.min.time()))
+
+        # Construct and return the Submission object
         return Submission(
-            date=datetime.strptime(date_str, DATE_FORMAT),
+            date=submission_date,
             file_path=file_path,
-            referral_count=frontmatter.get('referral_count', 0),
-            referral_methods=frontmatter.get('referral_methods', []),
-            who_did_you_refer=frontmatter.get('who_did_you_refer', []),
-            what_worked_best=frontmatter.get('what_worked_best', []),
-            how_to_improve=frontmatter.get('how_to_improve', '')
+            affiliate_tag=frontmatter['affiliate_tag'],
+            referral_count=frontmatter['referral_count'],
+            # Parse list fields, stripping markdown list indicators
+            who_did_you_refer=[item.strip('- ') for item in sections.get('Who did you refer?', '').split('\n') if item.strip()],
+            brief_description=sections.get('Brief description', ''),
+            referral_methods=[item.strip('- ') for item in sections.get('Referral methods', '').split('\n') if item.strip()],
+            specific_message=sections.get('Specific message', ''),
+            # Extract links from conversation summary
+            conversation_summary=re.findall(r'\[.*?\]\(.*?\)', sections.get('Conversation summary', '')),
+            what_worked_best=[item.strip('- ') for item in sections.get('What worked best?', '').split('\n') if item.strip()],
+            why_they_signed_up=sections.get('Why they signed up', ''),
+            what_you_did_well=sections.get('What you did well', ''),
+            how_to_improve=sections.get('How to improve', '')
         )
     except Exception as e:
+        # Log the error and return a default Submission object
         print(f"Error parsing {file_path}: {str(e)}")
-        return Submission(datetime.min, file_path, 0, [], [], [], '')
-
+        return Submission(datetime.min, file_path, '', 0, [], '', [], '', [], [], '', '', '')
+    
 def get_affiliates_and_submissions() -> Dict[str, List[Submission]]:
     """
     Collect all valid submissions for each affiliate.
     
     Returns:
-        Dict[str, List[Submission]]: A dictionary with affiliate names as keys and lists of their submissions as values.
+        Dict[str, List[Submission]]: A dictionary with affiliate tags as keys and lists of their submissions as values.
     """
     affiliates = {}
     with ThreadPoolExecutor() as executor:
         future_to_file = {
-            executor.submit(parse_submission_file, os.path.join(root, file)): (os.path.basename(root), os.path.join(root, file))
+            executor.submit(parse_submission_file, os.path.join(root, file)): os.path.join(root, file)
             for root, _, files in os.walk(AFFILIATES_DIR)
             for file in files if file.endswith('_submission.md')
         }
         
         for future in as_completed(future_to_file):
-            affiliate, file_path = future_to_file[future]
+            file_path = future_to_file[future]
             submission = future.result()
             if submission.referral_count > 0:  # Only add valid submissions
-                affiliates.setdefault(affiliate, []).append(submission)
+                affiliates.setdefault(submission.affiliate_tag, []).append(submission)
     
     return affiliates
 
@@ -218,16 +242,16 @@ def update_main_readme(affiliates: Dict[str, List[Submission]]) -> None:
     except IOError as e:
         print(f"Error updating README: {str(e)}")
 
-def update_affiliate_readme(affiliate: str, submissions: List[Submission]) -> None:
+def update_affiliate_readme(affiliate_tag: str, submissions: List[Submission]) -> None:
     """
     Create or update an individual affiliate's README with their submissions and stats.
     
     Args:
-        affiliate (str): Name of the affiliate.
+        affiliate_tag (str): Tag of the affiliate.
         submissions (List[Submission]): List of the affiliate's submissions.
     """
-    readme_path = os.path.join(AFFILIATES_DIR, affiliate, 'README.md')
-    content = f"# {affiliate}'s Submissions\n\n"
+    readme_path = os.path.join(os.path.dirname(submissions[0].file_path), 'README.md')
+    content = f"# {affiliate_tag}'s Submissions\n\n"
     content += "| Date | Referral Count | Referral Methods | Who Did You Refer |\n"
     content += "|------|----------------|------------------|--------------------|\n"
 
