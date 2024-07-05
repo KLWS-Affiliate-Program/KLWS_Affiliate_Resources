@@ -19,7 +19,7 @@ referral_methods:
 specific_message: |
   
 
-conversation_summary: |
+conversation_summary: 
   - [2024-06-30_screenshot_1.jpg](screenshots/2024-06-30_screenshot_1.jpg)
   - [2024-06-30_screenshot_2.jpg](screenshots/2024-06-30_screenshot_2.jpg)
 
