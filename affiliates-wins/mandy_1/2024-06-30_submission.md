@@ -20,8 +20,8 @@ specific_message: |
   
 
 conversation_summary: |
-  - [Screenshot 1]([2024-06-30_screenshot_1.jpg](screenshots/2024-06-30_screenshot_1.jpg))
-  - [Screenshot 2]([2024-06-30_screenshot_2.jpg](screenshots/2024-06-30_screenshot_2.jpg))
+  - [2024-06-30_screenshot_1.jpg](screenshots/2024-06-30_screenshot_1.jpg)
+  - [2024-06-30_screenshot_2.jpg](screenshots/2024-06-30_screenshot_2.jpg)
 
 # Your Thoughts
 what_worked_best:
