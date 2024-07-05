@@ -20,7 +20,7 @@ specific_message: |
   
 
 conversation_summary: |
-  [2024-06-30_screenshot_1.jpg](C:\Users\Owner\Documents\Backup_King's lot stuff\KLWS_Affiliate_Resources\affiliates-wins\mandy_1\screenshots\2024-06-30_screenshot_1.jpg) [2024-06-30_screenshot_2.jpg](C:\Users\Owner\Documents\Backup_King's lot stuff\KLWS_Affiliate_Resources\affiliates-wins\mandy_1\screenshots\2024-06-30_screenshot_2.jpg)
+  [2024-06-30_screenshot_1.jpg](screenshots/2024-06-30_screenshot_1.jpg) [2024-06-30_screenshot_2.jpg](screenshots/2024-06-30_screenshot_2.jpg)
 
 # Your Thoughts
 what_worked_best:
