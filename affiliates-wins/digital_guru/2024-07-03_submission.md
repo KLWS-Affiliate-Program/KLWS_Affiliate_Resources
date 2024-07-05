@@ -2,38 +2,38 @@
 date: 2024-07-03
 affiliate_tag: digital_guru
 referral_count: 5
+---
 
 # Referral Details
-who_did_you_refer:
-  - new customers
-  - millennials
 
-brief_description: |
-  I ran a targeted social media campaign and partnered with micro-influencers in the productivity niche.
+## Who did you refer?
+- New customers
+- Millennials
 
-referral_methods:
-  - social media marketing
-  - influencer partnerships
+## Brief description
+I ran a targeted social media campaign and partnered with micro-influencers in the productivity niche.
 
-specific_message: |
-  "Overwhelmed with your to-do list? This tool helped me reclaim 2 hours a day. Swipe up to transform your productivity!"
+## Referral methods
+- Social media marketing
+- Influencer partnerships
 
-conversation_summary: |
-  The authentic testimonials from micro-influencers resonated well with their engaged audiences.
-  Some influencer partnerships didn't yield expected results. I learned to thoroughly vet influencers and align on expectations beforehand.
+## Specific message
+Overwhelmed with your to-do list? This tool helped me reclaim 2 hours a day. Swipe up to transform your productivity!
+
+## Conversation summary
+The authentic testimonials from micro-influencers resonated well with their engaged audiences. Some influencer partnerships didn't yield expected results. I learned to thoroughly vet influencers and align on expectations beforehand.
 
 # Your Thoughts
-what_worked_best:
-  - Micro-influencer testimonials
-  - Social media targeting
 
-why_they_signed_up: |
-  The authentic testimonials from micro-influencers resonated well with their engaged audiences.
+## What worked best?
+- Micro-influencer testimonials
+- Social media targeting
 
-what_you_did_well: |
-  Building genuine relationships with influencers helped in creating authentic promotions.
+## Why they signed up
+The authentic testimonials from micro-influencers resonated well with their engaged audiences.
 
-how_to_improve: |
-  Thoroughly vet influencers and align on expectations beforehand. Consider creating a podcast to further establish authority in the productivity space.
+## What you did well
+Building genuine relationships with influencers helped in creating authentic promotions.
 
----
+## How to improve
+Thoroughly vet influencers and align on expectations beforehand. Consider creating a podcast to further establish authority in the productivity space.

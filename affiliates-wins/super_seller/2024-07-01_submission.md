@@ -2,38 +2,38 @@
 date: 2024-07-01
 affiliate_tag: super_seller
 referral_count: 7
+---
 
 # Referral Details
-who_did_you_refer:
-  - new customers
-  - small businesses
 
-brief_description: |
-  I hosted a series of webinars showcasing the product and followed up with targeted email campaigns.
+## Who did you refer?
+- New customers
+- Small businesses
 
-referral_methods:
-  - email marketing
-  - webinars
+## Brief description
+I hosted a series of webinars showcasing the product and followed up with targeted email campaigns.
 
-specific_message: |
-  "Boost your productivity by 50% with this game-changing tool. Join my webinar to see it in action!"
+## Referral methods
+- Email marketing
+- Webinars
 
-conversation_summary: |
-  The live demonstration in the webinars really helped people understand the product's value.
-  Getting people to attend the webinars was initially challenging. I learned to offer a valuable freebie to increase attendance.
+## Specific message
+Boost your productivity by 50% with this game-changing tool. Join my webinar to see it in action!
+
+## Conversation summary
+The live demonstration in the webinars really helped people understand the product's value. Getting people to attend the webinars was initially challenging. I learned to offer a valuable freebie to increase attendance.
 
 # Your Thoughts
-what_worked_best:
-  - Live demonstration in webinars
-  - Providing value first
 
-why_they_signed_up: |
-  Sharing case studies of successful users helped convince skeptical prospects.
+## What worked best?
+- Live demonstration in webinars
+- Providing value first
 
-what_you_did_well: |
-  Hosting webinars that demonstrated the product's value.
+## Why they signed up
+Sharing case studies of successful users helped convince skeptical prospects.
 
-how_to_improve: |
-  Offer a valuable freebie to increase webinar attendance.
+## What you did well
+Hosting webinars that demonstrated the product's value.
 
----
+## How to improve
+Offer a valuable freebie to increase webinar attendance.

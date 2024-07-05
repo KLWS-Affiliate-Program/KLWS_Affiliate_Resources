@@ -2,38 +2,38 @@
 date: 2024-07-15
 affiliate_tag: super_seller
 referral_count: 12
+---
 
 # Referral Details
-who_did_you_refer:
-  - new customers
-  - bloggers
 
-brief_description: |
-  I created a comprehensive blog post series and leveraged my network of fellow affiliates for cross-promotion.
+## Who did you refer?
+- New customers
+- Bloggers
 
-referral_methods:
-  - content marketing
-  - affiliate network
+## Brief description
+I created a comprehensive blog post series and leveraged my network of fellow affiliates for cross-promotion.
 
-specific_message: |
-  "Discover how top performers are 10x-ing their output with this innovative solution. Check out my latest blog post for the full scoop!"
+## Referral methods
+- Content marketing
+- Affiliate network
 
-conversation_summary: |
-  The detailed, value-packed blog posts established credibility and drove significant traffic.
-  Coordinating with other affiliates was time-consuming. I developed a systematic approach to streamline collaborations.
+## Specific message
+Discover how top performers are 10x-ing their output with this innovative solution. Check out my latest blog post for the full scoop!
+
+## Conversation summary
+The detailed, value-packed blog posts established credibility and drove significant traffic. Coordinating with other affiliates was time-consuming. I developed a systematic approach to streamline collaborations.
 
 # Your Thoughts
-what_worked_best:
-  - Detailed blog posts
-  - Collaboration with other affiliates
 
-why_they_signed_up: |
-  The blog posts provided valuable insights and the collaboration with other affiliates increased the reach and credibility of the promotions.
+## What worked best?
+- Detailed blog posts
+- Collaboration with other affiliates
 
-what_you_did_well: |
-  Created comprehensive and engaging content, and effectively leveraged my affiliate network for cross-promotion.
+## Why they signed up
+The blog posts provided valuable insights, and the collaboration with other affiliates increased the reach and credibility of the promotions.
 
-how_to_improve: |
-  Develop a more efficient collaboration process with other affiliates to save time. Experiment with creating short-form video content to complement the blog posts.
+## What you did well
+Created comprehensive and engaging content, and effectively leveraged my affiliate network for cross-promotion.
 
----
+## How to improve
+Develop a more efficient collaboration process with other affiliates to save time. Experiment with creating short-form video content to complement the blog posts.
