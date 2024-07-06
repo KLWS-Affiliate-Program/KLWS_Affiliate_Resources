@@ -21,7 +21,7 @@ no
 ## Specific message
 
 
-## Conversation summary
+## Screenshots
 [2024-06-30_screenshot_1.jpg](screenshots/2024-06-30_screenshot_1.jpg)
 [2024-06-30_screenshot_2.jpg](screenshots/2024-06-30_screenshot_2.jpg)
 
