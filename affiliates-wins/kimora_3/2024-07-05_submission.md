@@ -25,7 +25,7 @@ it was runz
 
 
 ## Screenshots
-[2024-07-05_screenshot_1.jpg](screenshots/2024-07-05_screenshot_1.jpg)
+[2024-07-05_screenshot_1.jpg](kimora_3/screenshots/2024-07-05_screenshot_1.jpg)
 
 
 # Your Thoughts
