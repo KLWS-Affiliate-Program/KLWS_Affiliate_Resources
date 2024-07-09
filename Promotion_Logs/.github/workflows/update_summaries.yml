@@ -3,7 +3,7 @@ name: Update Summaries
 on:
   push:
     paths:
-      - 'affiliate_logs/**/*_submission.md'
+      - 'Promotion_Logs/affiliate_logs/**/*_submission.md'
 
 jobs:
   update-summaries:
@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: pip install pyyaml
       - name: Update summaries
-        run: python .github/scripts/update_summaries.py
+        run: python Promotion_Logs/.github/scripts/update_summaries.py
       - name: Commit changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
