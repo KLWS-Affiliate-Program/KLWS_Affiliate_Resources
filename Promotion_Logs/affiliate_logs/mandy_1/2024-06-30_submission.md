@@ -7,7 +7,9 @@ referral_count: 6
 # Referral Details
 
 ## Who did you refer?
-- 
+- Friend
+- Family
+- Social Media Follower / Status Viewer
 
 ## Brief description
 no

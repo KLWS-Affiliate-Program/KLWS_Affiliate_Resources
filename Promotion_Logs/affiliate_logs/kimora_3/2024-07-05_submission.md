@@ -7,7 +7,10 @@ referral_count: 2
 # Referral Details
 
 ## Who did you refer?
-- 
+- Friend
+- Schoolmate
+- Neighbour
+- Colleague
 
 ## Brief description
 it was runz
