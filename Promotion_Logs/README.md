@@ -13,11 +13,11 @@ Below is an automatically updated list of our affiliates and their most recent s
 <!-- AFFILIATE LIST START -->
 | Affiliate | Latest Submission | Total Referrals |
 |-----------|--------------------|-----------------|
-| [social_butterfly](affiliates-wins/social_butterfly) | [2024-07-20](affiliates-wins/social_butterfly/2024-07-20_submission.md) | 26 |
-| [super_seller](affiliates-wins/super_seller) | [2024-07-15](affiliates-wins/super_seller/2024-07-15_submission.md) | 19 |
-| [digital_guru](affiliates-wins/digital_guru) | [2024-07-18](affiliates-wins/digital_guru/2024-07-18_submission.md) | 14 |
-| [mandy_1](affiliates-wins/mandy_1) | [2024-06-30](affiliates-wins/mandy_1/2024-06-30_submission.md) | 6 |
-| [kimora_3](affiliates-wins/kimora_3) | [2024-07-05](affiliates-wins/kimora_3/2024-07-05_submission.md) | 2 |
+| [social_butterfly](affiliate_logs/social_butterfly) | [2024-07-20](affiliate_logs/social_butterfly/2024-07-20_submission.md) | 26 |
+| [super_seller](affiliate_logs/super_seller) | [2024-07-15](affiliate_logs/super_seller/2024-07-15_submission.md) | 19 |
+| [digital_guru](affiliate_logs/digital_guru) | [2024-07-18](affiliate_logs/digital_guru/2024-07-18_submission.md) | 14 |
+| [mandy_1](affiliate_logs/mandy_1) | [2024-06-30](affiliate_logs/mandy_1/2024-06-30_submission.md) | 6 |
+| [kimora_3](affiliate_logs/kimora_3) | [2024-07-05](affiliate_logs/kimora_3/2024-07-05_submission.md) | 2 |
 
 <!-- AFFILIATE LIST END -->
 
@@ -40,7 +40,7 @@ Below is an automatically updated list of our affiliates and their most recent s
 - New customers
 - B2B clients
 - Freelancers
-- Friend
+- 
 - Bloggers
 - Enterprise clients
 - Startups
@@ -73,7 +73,7 @@ Below is an automatically updated list of our affiliates and their most recent s
 
 ## Tag Cloud
 <!-- TAG CLOUD START -->
-New customers(4) LinkedIn networking(2) Twitter chats(2) B2B clients(2) Freelancers(2) Telegram(2) Friend(2) Content marketing(1) Affiliate network(1) Bloggers(1) Case studies(1) Guest blogging(1) Enterprise clients(1) Startups(1) Paid advertising(1) Retargeting campaigns(1) Professionals(1) Email marketing(1) Webinars(1) Small businesses(1)
+New customers(4) LinkedIn networking(2) Twitter chats(2) B2B clients(2) Freelancers(2) Telegram(2) (2) Content marketing(1) Affiliate network(1) Bloggers(1) Case studies(1) Guest blogging(1) Enterprise clients(1) Startups(1) Paid advertising(1) Retargeting campaigns(1) Professionals(1) Email marketing(1) Webinars(1) Small businesses(1)
 <!-- TAG CLOUD END -->
 
 ## Program Statistics
