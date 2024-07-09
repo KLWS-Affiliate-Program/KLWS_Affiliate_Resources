@@ -3,7 +3,7 @@ name: Update Summaries
 on:
   push:
     paths:
-      - 'Promotion_Logs/affiliate_logs/**/*_submission.md'
+      - 'affiliate_logs/**/*_submission.md'
 
 jobs:
   update-summaries:
