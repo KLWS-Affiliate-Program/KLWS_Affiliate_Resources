@@ -16,6 +16,8 @@ Below is an automatically updated list of our affiliates and their most recent s
 | [social_butterfly](affiliate_logs/social_butterfly) | [2024-07-20](affiliate_logs/social_butterfly/2024-07-20_submission.md) | 26 |
 | [super_seller](affiliate_logs/super_seller) | [2024-07-15](affiliate_logs/super_seller/2024-07-15_submission.md) | 19 |
 | [digital_guru](affiliate_logs/digital_guru) | [2024-07-18](affiliate_logs/digital_guru/2024-07-18_submission.md) | 14 |
+| [mandy_1](affiliate_logs/mandy_1) | [2024-06-30](affiliate_logs/mandy_1/2024-06-30_submission.md) | 6 |
+| [kimora_3](affiliate_logs/kimora_3) | [2024-07-05](affiliate_logs/kimora_3/2024-07-05_submission.md) | 2 |
 
 <!-- AFFILIATE LIST END -->
 
@@ -38,11 +40,11 @@ Below is an automatically updated list of our affiliates and their most recent s
 - New customers
 - B2B clients
 - Freelancers
+- 
 - Bloggers
 - Enterprise clients
 - Startups
 - Professionals
-- Small businesses
 <!-- COMMON REFERRAL TYPES END -->
 
 ### What's Working Best
@@ -64,19 +66,21 @@ Below is an automatically updated list of our affiliates and their most recent s
 - Explore opportunities to speak at industry conferences to further expand our reach in the B2B space. (11 referrals)
 - Continue to refine audience targeting and ad creatives. Explore TikTok ads as a potential new channel to reach a younger demographic. (9 referrals)
 - Offer a valuable freebie to increase webinar attendance. (7 referrals)
+- show them my balance (6 referrals)
 - Thoroughly vet influencers and align on expectations beforehand. Consider creating a podcast to further establish authority in the productivity space. (5 referrals)
+- danced (2 referrals)
 <!-- AREAS FOR IMPROVEMENT END -->
 
 ## Tag Cloud
 <!-- TAG CLOUD START -->
-New customers(4) LinkedIn networking(2) Twitter chats(2) B2B clients(2) Freelancers(2) Content marketing(1) Affiliate network(1) Bloggers(1) Case studies(1) Guest blogging(1) Enterprise clients(1) Startups(1) Paid advertising(1) Retargeting campaigns(1) Professionals(1) Email marketing(1) Webinars(1) Small businesses(1) Social media marketing(1) Influencer partnerships(1)
+New customers(4) LinkedIn networking(2) Twitter chats(2) B2B clients(2) Freelancers(2) Telegram(2) (2) Content marketing(1) Affiliate network(1) Bloggers(1) Case studies(1) Guest blogging(1) Enterprise clients(1) Startups(1) Paid advertising(1) Retargeting campaigns(1) Professionals(1) Email marketing(1) Webinars(1) Small businesses(1)
 <!-- TAG CLOUD END -->
 
 ## Program Statistics
 <!-- PROGRAM STATS START -->
-- Total Affiliates: 3
-- Total Referrals: 59
-- Average Referrals per Affiliate: 19.67
+- Total Affiliates: 5
+- Total Referrals: 67
+- Average Referrals per Affiliate: 13.40
 <!-- PROGRAM STATS END -->
 
 ## Support
