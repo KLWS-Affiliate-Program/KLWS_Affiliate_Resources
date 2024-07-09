@@ -40,7 +40,7 @@ Below is an automatically updated list of our affiliates and their most recent s
 - New customers
 - B2B clients
 - Freelancers
-- 
+- Friend
 - Bloggers
 - Enterprise clients
 - Startups
@@ -73,7 +73,7 @@ Below is an automatically updated list of our affiliates and their most recent s
 
 ## Tag Cloud
 <!-- TAG CLOUD START -->
-New customers(4) LinkedIn networking(2) Twitter chats(2) B2B clients(2) Freelancers(2) Telegram(2) (2) Content marketing(1) Affiliate network(1) Bloggers(1) Case studies(1) Guest blogging(1) Enterprise clients(1) Startups(1) Paid advertising(1) Retargeting campaigns(1) Professionals(1) Email marketing(1) Webinars(1) Small businesses(1)
+New customers(4) LinkedIn networking(2) Twitter chats(2) B2B clients(2) Freelancers(2) Telegram(2) Friend(2) Content marketing(1) Affiliate network(1) Bloggers(1) Case studies(1) Guest blogging(1) Enterprise clients(1) Startups(1) Paid advertising(1) Retargeting campaigns(1) Professionals(1) Email marketing(1) Webinars(1) Small businesses(1)
 <!-- TAG CLOUD END -->
 
 ## Program Statistics
