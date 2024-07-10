@@ -16,7 +16,7 @@ Below is an automatically updated list of our affiliates and their most recent s
 | [social_butterfly](affiliate_logs/social_butterfly) | [2024-07-20](affiliate_logs/social_butterfly/2024-07-20_submission.md) | 26 |
 | [super_seller](affiliate_logs/super_seller) | [2024-07-15](affiliate_logs/super_seller/2024-07-15_submission.md) | 19 |
 | [digital_guru](affiliate_logs/digital_guru) | [2024-07-18](affiliate_logs/digital_guru/2024-07-18_submission.md) | 14 |
-| [makuochukwu - 1](affiliate_logs/makuochukwu - 1) | [2024-06-30](affiliate_logs/makuochukwu_1/2024-06-30_submission.md) | 6 |
+| [makuochukwu - 1](affiliate_logs/makuochukwu_1) | [2024-06-30](affiliate_logs/makuochukwu_1/2024-06-30_submission.md) | 6 |
 
 <!-- AFFILIATE LIST END -->
 
