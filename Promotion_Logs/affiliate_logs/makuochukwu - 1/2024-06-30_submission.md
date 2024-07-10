@@ -1,6 +1,6 @@
 ---
 date: 2024-06-30
-affiliate_tag: mandy_1
+affiliate_tag: makuochukwu - 1
 referral_count: 6
 ---
 
@@ -22,9 +22,9 @@ no
 
 
 ## Screenshots
-[2024-06-30_screenshot_1.jpg](mandy_1/screenshots/2024-06-30_screenshot_1.jpg)
+[2024-06-30_screenshot_1.jpg](makuochukwu - 1/screenshots/2024-06-30_screenshot_1.jpg)
 
-[2024-06-30_screenshot_2.jpg](mandy_1/screenshots/2024-06-30_screenshot_2.jpg)
+[2024-06-30_screenshot_2.jpg](makuochukwu - 1/screenshots/2024-06-30_screenshot_2.jpg)
 
 
 # Your Thoughts
