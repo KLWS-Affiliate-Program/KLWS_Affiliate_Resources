@@ -134,7 +134,7 @@ def generate_affiliate_table(affiliates: Dict[str, List[Submission]]) -> str:
         total_referrals = sum(submission.referral_count for submission in submissions)
         
         # Create relative paths for affiliate directory and latest submission
-        affiliate_dir = os.path.relpath(os.path.join(AFFILIATES_DIR, affiliate), start=os.path.dirname(README_PATH)).replace('\\', '/')
+        affiliate_dir = os.path.relpath(os.path.join(AFFILIATES_DIR, affiliate.replace(" - ", "_")), start=os.path.dirname(README_PATH)).replace('\\', '/')
         submission_path = os.path.relpath(latest_submission.file_path, start=os.path.dirname(README_PATH)).replace('\\', '/')
         
         # Create table row with linked affiliate name and latest submission
