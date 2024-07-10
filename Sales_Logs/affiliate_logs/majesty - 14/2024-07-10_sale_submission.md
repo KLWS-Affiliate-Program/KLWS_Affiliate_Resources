@@ -1,0 +1,41 @@
+---
+date: 2024-07-10
+affiliate_tag: majesty - 14
+agreed_price: 35000
+client_type: Friend
+sale_duration: Less than a week
+---
+
+# Sale Details
+
+## Who was your client?
+Friend
+
+## Sale Duration
+Less than a week
+
+## Agreed Price
+₦35000
+
+## Conversation Summary
+nothing o
+
+## Screenshots
+No screenshot provided
+
+# Your Insights
+
+## Key Approach
+testing testing
+
+## What Went Well
+testing testing 
+
+## Future Improvements
+testing testing 
+
+## Advice for Other Affiliates
+testing testing 
+
+## How can King's Lot help you sell more?
+testing testing 
