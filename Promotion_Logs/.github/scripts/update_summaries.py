@@ -191,8 +191,8 @@ def generate_program_stats(affiliates: Dict[str, List[Submission]]) -> str:
     """
     total_affiliates = len(affiliates)
     total_referrals = sum(sum(s.referral_count for s in submissions) for submissions in affiliates.values())
-    avg_referrals = total_referrals / total_affiliates if total_affiliates > 0 else 0
-    return f"- Total Affiliates: {total_affiliates}\n- Total Referrals: {total_referrals}\n- Average Referrals per Affiliate: {avg_referrals:.2f}"
+    avg_referrals = round(total_referrals / total_affiliates) if total_affiliates > 0 else 0
+    return f"- Total Affiliate Logs: {total_affiliates}\n- Total Referrals: {total_referrals}\n- Average Referrals per Affiliate: {avg_referrals}"
 
 def update_main_readme(affiliates: Dict[str, List[Submission]]) -> None:
     """
