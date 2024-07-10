@@ -16,9 +16,7 @@ Below is an automatically updated list of our affiliates and their most recent s
 | [social_butterfly](affiliate_logs/social_butterfly) | [2024-07-20](affiliate_logs/social_butterfly/2024-07-20_submission.md) | 26 |
 | [super_seller](affiliate_logs/super_seller) | [2024-07-15](affiliate_logs/super_seller/2024-07-15_submission.md) | 19 |
 | [digital_guru](affiliate_logs/digital_guru) | [2024-07-18](affiliate_logs/digital_guru/2024-07-18_submission.md) | 14 |
-| [mandy_1](affiliate_logs/mandy_1) | [2024-06-30](affiliate_logs/mandy_1/2024-06-30_submission.md) | 6 |
-| [makuochukwu - 1](affiliate_logs/makuochukwu - 1) | [2024-06-30](affiliate_logs/makuochukwu_1/2024-06-30_submission.md) | 6 |
-| [kimora_3](affiliate_logs/kimora_3) | [2024-07-05](affiliate_logs/kimora_3/2024-07-05_submission.md) | 2 |
+| [makuochukwu - 1](affiliate_logs/makuochukwu - 1) | [2024-06-30](affiliate_logs/makuochukwu_1/2024-06-30_submission.md) | 12 |
 
 <!-- AFFILIATE LIST END -->
 
@@ -28,10 +26,10 @@ Below is an automatically updated list of our affiliates and their most recent s
 <!-- TOP REFERRAL METHODS START -->
 - LinkedIn networking (15 referrals)
 - Twitter chats (15 referrals)
-- Telegram (14 referrals)
 - Content marketing (12 referrals)
 - Affiliate network (12 referrals)
 - One-on-One Conversation (12 referrals)
+- Telegram (12 referrals)
 - Case studies (11 referrals)
 - Guest blogging (11 referrals)
 <!-- TOP REFERRAL METHODS END -->
@@ -39,9 +37,9 @@ Below is an automatically updated list of our affiliates and their most recent s
 ### Most Common Referral Types
 <!-- COMMON REFERRAL TYPES START -->
 - New customers
-- Friend
 - B2B clients
 - Freelancers
+- Friend
 - Family
 - Social Media Follower / Status Viewer
 - Bloggers
@@ -52,11 +50,11 @@ Below is an automatically updated list of our affiliates and their most recent s
 <!-- WHATS WORKING BEST START -->
 - Twitter chats (15 referrals)
 - Positioning as trusted advisor (15 referrals)
-- Helping them understand the program more (14 referrals)
 - Detailed blog posts (12 referrals)
 - Collaboration with other affiliates (12 referrals)
 - Knowing them well (12 referrals)
 - Explaining why the program is good (12 referrals)
+- Helping them understand the program more (12 referrals)
 - Case studies (11 referrals)
 <!-- WHATS WORKING BEST END -->
 
@@ -69,19 +67,18 @@ Below is an automatically updated list of our affiliates and their most recent s
 - Continue to refine audience targeting and ad creatives. Explore TikTok ads as a potential new channel to reach a younger demographic. (9 referrals)
 - Offer a valuable freebie to increase webinar attendance. (7 referrals)
 - Thoroughly vet influencers and align on expectations beforehand. Consider creating a podcast to further establish authority in the productivity space. (5 referrals)
-- danced (2 referrals)
 <!-- AREAS FOR IMPROVEMENT END -->
 
 ## Tag Cloud
 <!-- TAG CLOUD START -->
-New customers(4) Telegram(3) Friend(3) LinkedIn networking(2) Twitter chats(2) B2B clients(2) Freelancers(2) One-on-One Conversation(2) Family(2) Social Media Follower / Status Viewer(2) Content marketing(1) Affiliate network(1) Bloggers(1) Case studies(1) Guest blogging(1) Enterprise clients(1) Startups(1) Paid advertising(1) Retargeting campaigns(1) Professionals(1)
+New customers(4) LinkedIn networking(2) Twitter chats(2) B2B clients(2) Freelancers(2) One-on-One Conversation(2) Telegram(2) Friend(2) Family(2) Social Media Follower / Status Viewer(2) Content marketing(1) Affiliate network(1) Bloggers(1) Case studies(1) Guest blogging(1) Enterprise clients(1) Startups(1) Paid advertising(1) Retargeting campaigns(1) Professionals(1)
 <!-- TAG CLOUD END -->
 
 ## Program Statistics
 <!-- PROGRAM STATS START -->
-- Total Affiliates: 6
-- Total Referrals: 73
-- Average Referrals per Affiliate: 12.17
+- Total Affiliates: 4
+- Total Referrals: 71
+- Average Referrals per Affiliate: 17.75
 <!-- PROGRAM STATS END -->
 
 ## Support
