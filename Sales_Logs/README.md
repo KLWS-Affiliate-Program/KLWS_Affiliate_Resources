@@ -13,6 +13,11 @@ Below is an automatically updated list of our affiliate logs and their most rece
 <!-- AFFILIATE LIST START -->
 | Affiliate | Latest Submission | Total Sales |
 |-----------|--------------------|--------------|
+| [gojo - 15](affiliate_logs/gojo_15) | [2024-07-11-171817](affiliate_logs/gojo_15/2024-07-11-171817_sale_submission.md) | ₦90,000 |
+| [loki - 4](affiliate_logs/loki_4) | [2024-07-11-180951](affiliate_logs/loki_4/2024-07-11-180951_sale_submission.md) | ₦50,000 |
+| [kimora - 2](affiliate_logs/kimora_2) | [2024-07-08-150912](affiliate_logs/kimora_2/2024-07-08-150912_sale_submission.md) | ₦40,000 |
+| [loki - 13](affiliate_logs/loki_13) | [2024-07-11-172718](affiliate_logs/loki_13/2024-07-11-172718_sale_submission.md) | ₦40,000 |
+| [majesty - 14](affiliate_logs/majesty_14) | [2024-07-10-230535](affiliate_logs/majesty_14/2024-07-10-230535_sale_submission.md) | ₦35,000 |
 
 <!-- AFFILIATE LIST END -->
 
@@ -20,38 +25,58 @@ Below is an automatically updated list of our affiliate logs and their most rece
 
 ### Top Key Approaches (by Agreed Price)
 <!-- TOP KEY APPROACHES START -->
-
+- told him about the comfort and ease of service (₦50,000)
+- mono mono (₦50,000)
+- ease of service (₦40,000)
+- the fact that i offered a low price to the client (₦40,000)
+- not much (₦40,000)
+- testing testing (₦35,000)
 <!-- TOP KEY APPROACHES END -->
 
 ### Top Successful Strategies (by Agreed Price)
 <!-- TOP SUCCESSFUL STRATEGIES START -->
-
+- i spoke with confidence (₦90,000)
+- testing testing (₦75,000)
+- mono mono (₦50,000)
+- nonya (₦40,000)
 <!-- TOP SUCCESSFUL STRATEGIES END -->
 
 ### Most Common Client Types
 <!-- COMMON CLIENT TYPES START -->
-
+- Schoolmate
+- Family
+- Acquaintance
+- Neighbour
+- Friend
 <!-- COMMON CLIENT TYPES END -->
 
 ### Pricing Insights
 <!-- PRICING INSIGHTS START -->
-No data available.
+On average, our affiliates price the service at ₦42,500.
 <!-- PRICING INSIGHTS END -->
 
 ### Areas for Improvement
 <!-- AREAS FOR IMPROVEMENT START -->
-
+- testing testing
+- speak louder
+- i spoke louder
+- business
+- mono mono
 <!-- AREAS FOR IMPROVEMENT END -->
 
 ### Advice for Other Affiliates
 <!-- ADVICE FOR AFFILIATES START -->
-
+- testing testing
+- just a test
+- nope
+- stuff is stuff, do is do, later is never
+- mono mono
 <!-- ADVICE FOR AFFILIATES END -->
 
 ## Sales Log Statistics
 <!-- PROGRAM STATS START -->
-- Affiliates with Logs: 0
-- Total Submissions: 0
+- Affiliates with Logs: 5
+- Total Submissions: 6
 <!-- PROGRAM STATS END -->
 
 ## Support
