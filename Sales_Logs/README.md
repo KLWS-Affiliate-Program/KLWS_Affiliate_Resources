@@ -13,8 +13,8 @@ Below is an automatically updated list of our affiliate logs and their most rece
 <!-- AFFILIATE LIST START -->
 | Affiliate | Latest Submission | Total Sales |
 |-----------|--------------------|--------------|
-| [gojo - 15](affiliate_logs/gojo_15) | [2024-07-11](affiliate_logs/gojo_15/2024-07-11_sale_submission.md) | ₦50,000 |
 | [kimora - 2](affiliate_logs/kimora_2) | [2024-07-08](affiliate_logs/kimora_2/2024-07-08_sale_submission.md) | ₦40,000 |
+| [gojo - 15](affiliate_logs/gojo_15) | [2024-07-11](affiliate_logs/gojo_15/2024-07-11_sale_submission.md) | ₦40,000 |
 | [majesty - 14](affiliate_logs/majesty_14) | [2024-07-10](affiliate_logs/majesty_14/2024-07-10_sale_submission.md) | ₦35,000 |
 
 <!-- AFFILIATE LIST END -->
@@ -23,42 +23,42 @@ Below is an automatically updated list of our affiliate logs and their most rece
 
 ### Top Key Approaches (by Agreed Price)
 <!-- TOP KEY APPROACHES START -->
-- told him about the comfort and ease of service (₦50,000)
 - the fact that i offered a low price to the client (₦40,000)
+- ease of service (₦40,000)
 - testing testing (₦35,000)
 <!-- TOP KEY APPROACHES END -->
 
 ### Top Successful Strategies (by Agreed Price)
 <!-- TOP SUCCESSFUL STRATEGIES START -->
-- i spoke with confidence (₦50,000)
 - nonya (₦40,000)
+- i spoke with confidence (₦40,000)
 - testing testing (₦35,000)
 <!-- TOP SUCCESSFUL STRATEGIES END -->
 
 ### Most Common Client Types
 <!-- COMMON CLIENT TYPES START -->
-- Family
-- Acquaintance
 - Friend
+- Acquaintance
+- Schoolmate
 <!-- COMMON CLIENT TYPES END -->
 
 ### Pricing Insights
 <!-- PRICING INSIGHTS START -->
-On average, our affiliates price the service at ₦41,666.
+On average, our affiliates price the service at ₦38,333.
 <!-- PRICING INSIGHTS END -->
 
 ### Areas for Improvement
 <!-- AREAS FOR IMPROVEMENT START -->
-- speak louder
-- business
 - testing testing
+- business
+- i spoke louder
 <!-- AREAS FOR IMPROVEMENT END -->
 
 ### Advice for Other Affiliates
 <!-- ADVICE FOR AFFILIATES START -->
-- just a test
-- stuff is stuff, do is do, later is never
 - testing testing
+- stuff is stuff, do is do, later is never
+- nope
 <!-- ADVICE FOR AFFILIATES END -->
 
 ## Sales Log Statistics
