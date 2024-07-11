@@ -10,8 +10,8 @@
 - Lowest Price: ₦50,000
 - Most Common Client Type: Neighbour
 
-## Top 5 Key Approaches (by Agreed Price)
+## Top Key Approaches (by Agreed Price)
 - mono mono (₦50,000)
 
-## Top 5 Successful Strategies (by Agreed Price)
+## Top Successful Strategies (by Agreed Price)
 - mono mono (₦50,000)

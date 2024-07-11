@@ -175,10 +175,10 @@ def update_affiliate_readme(affiliate_tag: str, submissions: List[Submission]) -
     content += f"- Lowest Price: ₦{min(s.agreed_price for s in submissions):,}\n"
     content += f"- Most Common Client Type: {Counter(all_client_types).most_common(1)[0][0] if all_client_types else 'N/A'}\n"
 
-    content += "\n## Top 5 Key Approaches (by Agreed Price)\n"
+    content += "\n## Top Key Approaches (by Agreed Price)\n"
     content += get_top_items_by_value(submissions, 'key_approach', 5)
 
-    content += "\n\n## Top 5 Successful Strategies (by Agreed Price)\n"
+    content += "\n\n## Top Successful Strategies (by Agreed Price)\n"
     content += get_top_items_by_value(submissions, 'what_went_well', 5)
 
     os.makedirs(os.path.dirname(readme_path), exist_ok=True)

@@ -10,8 +10,8 @@
 - Lowest Price: ₦40,000
 - Most Common Client Type: Schoolmate
 
-## Top 5 Key Approaches (by Agreed Price)
+## Top Key Approaches (by Agreed Price)
 - not much (₦40,000)
 
-## Top 5 Successful Strategies (by Agreed Price)
+## Top Successful Strategies (by Agreed Price)
 - testing testing (₦40,000)

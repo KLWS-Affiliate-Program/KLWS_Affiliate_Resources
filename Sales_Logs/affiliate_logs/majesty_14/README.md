@@ -10,8 +10,8 @@
 - Lowest Price: ₦35,000
 - Most Common Client Type: Friend
 
-## Top 5 Key Approaches (by Agreed Price)
+## Top Key Approaches (by Agreed Price)
 - testing testing (₦35,000)
 
-## Top 5 Successful Strategies (by Agreed Price)
+## Top Successful Strategies (by Agreed Price)
 - testing testing (₦35,000)

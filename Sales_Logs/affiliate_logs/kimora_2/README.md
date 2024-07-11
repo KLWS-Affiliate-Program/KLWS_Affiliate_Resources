@@ -10,8 +10,8 @@
 - Lowest Price: ₦40,000
 - Most Common Client Type: Acquaintance
 
-## Top 5 Key Approaches (by Agreed Price)
+## Top Key Approaches (by Agreed Price)
 - the fact that i offered a low price to the client (₦40,000)
 
-## Top 5 Successful Strategies (by Agreed Price)
+## Top Successful Strategies (by Agreed Price)
 - nonya (₦40,000)
