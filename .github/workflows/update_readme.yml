@@ -2,9 +2,11 @@ name: Update Readme
 
 on:
   push:
-    paths:
-      - 'Promotion_Logs/affiliate_logs/**/*_submission.md'
-      - 'Sales_Logs/affiliate_logs/**/*_submission.md'
+    branches:
+      - main 
+  pull_request:
+    branches:
+      - main
 
 jobs:
   update-summaries:

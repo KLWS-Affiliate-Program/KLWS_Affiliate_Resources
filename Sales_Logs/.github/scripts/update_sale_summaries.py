@@ -109,7 +109,7 @@ def generate_program_stats(affiliates: Dict[str, List[Submission]]) -> str:
     """Generate overall program statistics."""
     total_affiliates = len(affiliates)
     total_submissions = sum(len(submissions) for submissions in affiliates.values())
-    return f"- Total Affiliates: {total_affiliates}\n- Total Submissions: {total_submissions}"
+    return f"- Affiliates with Logs: {total_affiliates}\n- Total Submissions: {total_submissions}"
 
 def update_main_readme(affiliates: Dict[str, List[Submission]]) -> None:
     """Update the main README with all sections."""
