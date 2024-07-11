@@ -16,11 +16,11 @@ Welcome to the KLWS Affiliate Program repository! This space tracks and analyzes
 
 ## Quick Stats
 
-- Total Affiliate Logs: 9 (Promotion Logs), 0 (Sale Logs)
+- Total Affiliate Logs: 9 (Promotion Logs), 6 (Sale Logs)
 
 ### Pricing Insights
 
-- On average, our affiliates price the service at ₦0
+- On average, our affiliates price the service at ₦42,500
 
 ### Promotion Insights
 
