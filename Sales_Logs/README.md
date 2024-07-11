@@ -13,8 +13,8 @@ Below is an automatically updated list of our affiliate logs and their most rece
 <!-- AFFILIATE LIST START -->
 | Affiliate | Latest Submission | Total Sales |
 |-----------|--------------------|--------------|
-| [kimora - 2](affiliate_logs/kimora_2) | [2024-07-11](affiliate_logs/kimora_2/2024-07-11_sale_submission.md) | ₦40,000 |
-| [majesty - 14](affiliate_logs/majesty_14) | [2024-07-11](affiliate_logs/majesty_14/2024-07-11_sale_submission.md) | ₦35,000 |
+| [kimora - 2](affiliate_logs/kimora_2) | [2024-07-08](affiliate_logs/kimora_2/2024-07-08_sale_submission.md) | ₦40,000 |
+| [majesty - 14](affiliate_logs/majesty_14) | [2024-07-10](affiliate_logs/majesty_14/2024-07-10_sale_submission.md) | ₦35,000 |
 
 <!-- AFFILIATE LIST END -->
 
