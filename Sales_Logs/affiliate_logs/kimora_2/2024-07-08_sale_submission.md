@@ -1,5 +1,5 @@
 ---
-date: 2024-07-11
+date: 2024-07-08
 affiliate_tag: kimora - 2
 agreed_price: ₦40,000
 client_type: Acquaintance
@@ -21,9 +21,9 @@ Acquaintance
 not much really
 
 ## Screenshots
-[2024-07-11_screenshot_1.jpg](kimora_2/screenshots/2024-07-11_screenshot_1.jpg)
+[2024-07-08_screenshot_1.jpg](kimora_2/screenshots/2024-07-08_screenshot_1.jpg)
 
-[2024-07-11_screenshot_2.jpg](kimora_2/screenshots/2024-07-11_screenshot_2.jpg)
+[2024-07-08_screenshot_2.jpg](kimora_2/screenshots/2024-07-08_screenshot_2.jpg)
 
 
 # Your Insights

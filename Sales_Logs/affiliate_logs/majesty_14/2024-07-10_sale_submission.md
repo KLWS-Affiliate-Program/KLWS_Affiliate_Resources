@@ -1,5 +1,5 @@
 ---
-date: 2024-07-11
+date: 2024-07-10
 affiliate_tag: majesty - 14
 agreed_price: ₦35,000
 client_type: Friend
