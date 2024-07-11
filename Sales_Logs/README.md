@@ -13,6 +13,7 @@ Below is an automatically updated list of our affiliate logs and their most rece
 <!-- AFFILIATE LIST START -->
 | Affiliate | Latest Submission | Total Sales |
 |-----------|--------------------|--------------|
+| [kimora - 2](affiliate_logs/kimora_2) | [2024-07-11](affiliate_logs/kimora_2/2024-07-11_sale_submission.md) | ₦40,000 |
 | [majesty - 14](affiliate_logs/majesty_14) | [2024-07-11](affiliate_logs/majesty_14/2024-07-11_sale_submission.md) | ₦35,000 |
 
 <!-- AFFILIATE LIST END -->
@@ -21,38 +22,43 @@ Below is an automatically updated list of our affiliate logs and their most rece
 
 ### Top 8 Key Approaches (by Agreed Price)
 <!-- TOP KEY APPROACHES START -->
+- the fact that i offered a low price to the client (₦40,000)
 - testing testing (₦35,000)
 <!-- TOP KEY APPROACHES END -->
 
 ### Top 8 Successful Strategies (by Agreed Price)
 <!-- TOP SUCCESSFUL STRATEGIES START -->
+- nonya (₦40,000)
 - testing testing (₦35,000)
 <!-- TOP SUCCESSFUL STRATEGIES END -->
 
 ### Most Common Client Types
 <!-- COMMON CLIENT TYPES START -->
 - Friend
+- Acquaintance
 <!-- COMMON CLIENT TYPES END -->
 
 ### Pricing Insights
 <!-- PRICING INSIGHTS START -->
-On average, our affiliates price the service at ₦35,000.
+On average, our affiliates price the service at ₦37,500.
 <!-- PRICING INSIGHTS END -->
 
 ### Areas for Improvement
 <!-- AREAS FOR IMPROVEMENT START -->
 - testing testing
+- business
 <!-- AREAS FOR IMPROVEMENT END -->
 
 ### Advice for Other Affiliates
 <!-- ADVICE FOR AFFILIATES START -->
 - testing testing
+- stuff is stuff, do is do, later is never
 <!-- ADVICE FOR AFFILIATES END -->
 
 ## Sales Log Statistics
 <!-- PROGRAM STATS START -->
-- Total Affiliates: 1
-- Total Submissions: 1
+- Total Affiliates: 2
+- Total Submissions: 2
 <!-- PROGRAM STATS END -->
 
 ## Support
