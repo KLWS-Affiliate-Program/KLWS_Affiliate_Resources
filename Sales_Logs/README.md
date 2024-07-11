@@ -25,53 +25,29 @@ Below is an automatically updated list of our affiliate logs and their most rece
 
 ### Top Key Approaches (Most common)
 <!-- TOP KEY APPROACHES START -->
-<<<<<<< HEAD
 - told him about the comfort and ease of service (1)
 - ease of service (1)
 - the fact that i offered a low price to the client (1)
 - not much (1)
 - mono mono (1)
 - testing testing (1)
-=======
-- mono mono (₦50,000)
-- told him about the comfort and ease of service (₦50,000)
-- the fact that i offered a low price to the client (₦40,000)
-- ease of service (₦40,000)
-- not much (₦40,000)
-- testing testing (₦35,000)
->>>>>>> 63c65cac88c3326881459e50e9ceb56441d3d1ed
 <!-- TOP KEY APPROACHES END -->
 
 ### Top Successful Strategies (Most common)
 <!-- TOP SUCCESSFUL STRATEGIES START -->
-<<<<<<< HEAD
 - i spoke with confidence (2)
 - testing testing (2)
 - nonya (1)
 - mono mono (1)
-=======
-- i spoke with confidence (₦90,000)
-- testing testing (₦75,000)
-- mono mono (₦50,000)
-- nonya (₦40,000)
->>>>>>> 63c65cac88c3326881459e50e9ceb56441d3d1ed
 <!-- TOP SUCCESSFUL STRATEGIES END -->
 
 ### Most Common Client Types
 <!-- COMMON CLIENT TYPES START -->
-<<<<<<< HEAD
 - Schoolmate (2)
 - Family (1)
 - Acquaintance (1)
 - Neighbour (1)
 - Friend (1)
-=======
-- Schoolmate
-- Neighbour
-- Friend
-- Acquaintance
-- Family
->>>>>>> 63c65cac88c3326881459e50e9ceb56441d3d1ed
 <!-- COMMON CLIENT TYPES END -->
 
 ### Pricing Insights
@@ -81,36 +57,20 @@ On average, our affiliates price the service at ₦42,500.
 
 ### Areas for Improvement (Most common)
 <!-- AREAS FOR IMPROVEMENT START -->
-<<<<<<< HEAD
 - testing testing (2)
 - speak louder (1)
 - i spoke louder (1)
 - business (1)
 - mono mono (1)
-=======
-- testing testing
-- mono mono
-- business
-- speak louder
-- i spoke louder
->>>>>>> 63c65cac88c3326881459e50e9ceb56441d3d1ed
 <!-- AREAS FOR IMPROVEMENT END -->
 
 ### Advice for Other Affiliates (Most common)
 <!-- ADVICE FOR AFFILIATES START -->
-<<<<<<< HEAD
 - testing testing (2)
 - just a test (1)
 - nope (1)
 - stuff is stuff, do is do, later is never (1)
 - mono mono (1)
-=======
-- testing testing
-- mono mono
-- stuff is stuff, do is do, later is never
-- just a test
-- nope
->>>>>>> 63c65cac88c3326881459e50e9ceb56441d3d1ed
 <!-- ADVICE FOR AFFILIATES END -->
 
 ## Sales Log Statistics
