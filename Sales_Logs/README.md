@@ -13,6 +13,7 @@ Below is an automatically updated list of our affiliate logs and their most rece
 <!-- AFFILIATE LIST START -->
 | Affiliate | Latest Submission | Total Sales |
 |-----------|--------------------|--------------|
+| [loki - 4](affiliate_logs/loki_4) | [2024-07-11](affiliate_logs/loki_4/2024-07-11_sale_submission.md) | ₦50,000 |
 | [kimora - 2](affiliate_logs/kimora_2) | [2024-07-08](affiliate_logs/kimora_2/2024-07-08_sale_submission.md) | ₦40,000 |
 | [gojo - 15](affiliate_logs/gojo_15) | [2024-07-11](affiliate_logs/gojo_15/2024-07-11_sale_submission.md) | ₦40,000 |
 | [loki - 13](affiliate_logs/loki_13) | [2024-07-11](affiliate_logs/loki_13/2024-07-11_sale_submission.md) | ₦40,000 |
@@ -24,6 +25,7 @@ Below is an automatically updated list of our affiliate logs and their most rece
 
 ### Top Key Approaches (by Agreed Price)
 <!-- TOP KEY APPROACHES START -->
+- mono mono (₦50,000)
 - the fact that i offered a low price to the client (₦40,000)
 - ease of service (₦40,000)
 - not much (₦40,000)
@@ -33,6 +35,7 @@ Below is an automatically updated list of our affiliate logs and their most rece
 ### Top Successful Strategies (by Agreed Price)
 <!-- TOP SUCCESSFUL STRATEGIES START -->
 - testing testing (₦75,000)
+- mono mono (₦50,000)
 - nonya (₦40,000)
 - i spoke with confidence (₦40,000)
 <!-- TOP SUCCESSFUL STRATEGIES END -->
@@ -40,18 +43,20 @@ Below is an automatically updated list of our affiliate logs and their most rece
 ### Most Common Client Types
 <!-- COMMON CLIENT TYPES START -->
 - Schoolmate
+- Neighbour
 - Friend
 - Acquaintance
 <!-- COMMON CLIENT TYPES END -->
 
 ### Pricing Insights
 <!-- PRICING INSIGHTS START -->
-On average, our affiliates price the service at ₦38,750.
+On average, our affiliates price the service at ₦41,000.
 <!-- PRICING INSIGHTS END -->
 
 ### Areas for Improvement
 <!-- AREAS FOR IMPROVEMENT START -->
 - testing testing
+- mono mono
 - business
 - i spoke louder
 <!-- AREAS FOR IMPROVEMENT END -->
@@ -59,14 +64,15 @@ On average, our affiliates price the service at ₦38,750.
 ### Advice for Other Affiliates
 <!-- ADVICE FOR AFFILIATES START -->
 - testing testing
+- mono mono
 - stuff is stuff, do is do, later is never
 - nope
 <!-- ADVICE FOR AFFILIATES END -->
 
 ## Sales Log Statistics
 <!-- PROGRAM STATS START -->
-- Affiliates with Logs: 4
-- Total Submissions: 4
+- Affiliates with Logs: 5
+- Total Submissions: 5
 <!-- PROGRAM STATS END -->
 
 ## Support
