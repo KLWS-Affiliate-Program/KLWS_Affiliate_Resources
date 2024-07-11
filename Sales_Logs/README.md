@@ -20,13 +20,13 @@ Below is an automatically updated list of our affiliate logs and their most rece
 
 ## Key Insights for Affiliates
 
-### Top 8 Key Approaches (by Agreed Price)
+### Top Key Approaches (by Agreed Price)
 <!-- TOP KEY APPROACHES START -->
 - the fact that i offered a low price to the client (₦40,000)
 - testing testing (₦35,000)
 <!-- TOP KEY APPROACHES END -->
 
-### Top 8 Successful Strategies (by Agreed Price)
+### Top Successful Strategies (by Agreed Price)
 <!-- TOP SUCCESSFUL STRATEGIES START -->
 - nonya (₦40,000)
 - testing testing (₦35,000)
