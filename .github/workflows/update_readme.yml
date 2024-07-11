@@ -1,24 +1,20 @@
 name: Update Readme
 
 on:
-  push:
-    branches:
-      - main 
-  pull_request:
-    branches:
-      - main
   workflow_run:
-    workflows: ["*"]
+    workflows: ["Update Sale Summaries", "Update Promotion Summaries"]
     types:
       - completed
 
 jobs:
-  update-summaries:
+  update-readme:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
