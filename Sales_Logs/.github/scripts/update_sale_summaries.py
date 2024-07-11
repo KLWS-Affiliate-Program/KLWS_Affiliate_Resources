@@ -87,6 +87,15 @@ def generate_affiliate_table(affiliates: Dict[str, List[Submission]]) -> str:
     
     return table
 
+def get_top_items_by_value(submissions: List[Submission], attribute: str, n: int = 8) -> str:
+    """Get top n items based on agreed price."""
+    items = {}
+    for submission in submissions:
+        item = getattr(submission, attribute)
+        if item:
+            items[item] = items.get(item, 0) + submission.agreed_price
+    
+    return "\n".join(f"- {item} (₦{value:,})" for item, value in sorted(items.items(), key=lambda x: x[1], reverse=True)[:n])
 
 def get_top_items_by_occurrences(submissions: List[Submission], attribute: str, n: int = 8) -> str:
     """Get top n items based on occurrences."""
@@ -166,11 +175,11 @@ def update_affiliate_readme(affiliate_tag: str, submissions: List[Submission]) -
     content += f"- Lowest Price: ₦{min(s.agreed_price for s in submissions):,}\n"
     content += f"- Most Common Client Type: {Counter(all_client_types).most_common(1)[0][0] if all_client_types else 'N/A'}\n"
 
-    content += "\n## Top 5 Key Approaches (by Occurrences)\n"
-    content += get_top_items_by_occurrences(submissions, 'key_approach', 5)
+    content += "\n## Top 5 Key Approaches (by Agreed Price)\n"
+    content += get_top_items_by_value(submissions, 'key_approach', 5)
 
-    content += "\n\n## Top 5 Successful Strategies (by Occurrences)\n"
-    content += get_top_items_by_occurrences(submissions, 'what_went_well', 5)
+    content += "\n\n## Top 5 Successful Strategies (by Agreed Price)\n"
+    content += get_top_items_by_value(submissions, 'what_went_well', 5)
 
     os.makedirs(os.path.dirname(readme_path), exist_ok=True)
     with open(readme_path, 'w', encoding='utf-8') as f:
