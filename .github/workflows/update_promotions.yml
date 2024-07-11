@@ -1,4 +1,4 @@
-name: Update Summaries
+name: Update Promotion Summaries
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
           python-version: '3.x'
       - name: Install dependencies
         run: pip install pyyaml
-      - name: Update summaries
+      - name: Update promotion summaries
         run: python Promotion_Logs/.github/scripts/update_summaries.py
       - name: Commit changes
         env:
@@ -29,5 +29,5 @@ jobs:
           git add .
           git status
           git diff --staged
-          git commit -m "Update summaries" -a || echo "No changes to commit"
+          git commit -m "Update promotion readme" -a || echo "No changes to commit"
           git push -v https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git

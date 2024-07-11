@@ -4,7 +4,7 @@ Welcome to APRL repository! This space is dedicated to tracking and sharing the 
 
 ## About This Repository
 
-This repository serves as a hub for our affiliates to record and share their promotion referral successes, strategies, and insights. It's designed to foster community learning and showcase the outstanding work of our affiliate network.
+This repository serves as a central hub for our affiliates to record and share their promotion referral successes, strategies, and insights. It's designed to foster community learning and showcase the outstanding work of our affiliate network.
 
 ## Latest Affiliate Submissions
 
