@@ -2,8 +2,8 @@
 
 | Date | Referral Count | Referral Methods | Who Did You Refer |
 |------|----------------|------------------|--------------------|
-| [2024-07-15](2024-07-15_submission.md) | 12 | Content marketing, Affiliate network | New customers, Bloggers |
-| [2024-07-01](2024-07-01_submission.md) | 7 | Email marketing, Webinars | New customers, Small businesses |
+| [2024-07-15-000000](2024-07-15_submission.md) | 12 | Content marketing, Affiliate network | New customers, Bloggers |
+| [2024-07-01-000000](2024-07-01_submission.md) | 7 | Email marketing, Webinars | New customers, Small businesses |
 
 ## Key Stats
 - Total Submissions: 2
