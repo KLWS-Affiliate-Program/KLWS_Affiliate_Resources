@@ -1,24 +1,24 @@
 ---
 date: 2024-07-11
 affiliate_tag: gojo - 15
-agreed_price: ₦50,000
-client_type: Family
-sale_duration: 1-2 weeks
+agreed_price: ₦40,000
+client_type: Schoolmate
+sale_duration: 2-4 weeks
 ---
 
 # Sale Details
 
 ## Who was your client?
-Family
+Schoolmate
 
 ## Sale Duration
-1-2 weeks
+2-4 weeks
 
 ## Agreed Price
-₦50,000
+₦40,000
 
 ## Conversation Summary
-not much
+a few things
 
 ## Screenshots
 No screenshot provided
@@ -26,16 +26,16 @@ No screenshot provided
 # Your Insights
 
 ## Key Approach
-told him about the comfort and ease of service
+ease of service
 
 ## What Went Well
 i spoke with confidence
 
 ## Future Improvements
-speak louder
+i spoke louder
 
 ## Advice for Other Affiliates
-just a test
+nope
 
 ## How can King's Lot help you sell more?
-testing
+nope
