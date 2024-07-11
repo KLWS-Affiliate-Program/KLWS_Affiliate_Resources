@@ -11,9 +11,9 @@
 - Lowest Price: ₦40,000
 - Most Common Client Type: Schoolmate
 
-## Top 5 Key Approaches (by Agreed Price)
-- told him about the comfort and ease of service (₦50,000)
-- ease of service (₦40,000)
+## Top 5 Key Approaches (by Occurrences)
+- told him about the comfort and ease of service (1)
+- ease of service (1)
 
-## Top 5 Successful Strategies (by Agreed Price)
-- i spoke with confidence (₦90,000)
+## Top 5 Successful Strategies (by Occurrences)
+- i spoke with confidence (2)

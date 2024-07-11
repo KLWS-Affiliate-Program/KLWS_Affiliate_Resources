@@ -87,15 +87,11 @@ def generate_affiliate_table(affiliates: Dict[str, List[Submission]]) -> str:
     
     return table
 
-def get_top_items_by_value(submissions: List[Submission], attribute: str, n: int = 8) -> str:
-    """Get top n items based on agreed price."""
-    items = {}
-    for submission in submissions:
-        item = getattr(submission, attribute)
-        if item:
-            items[item] = items.get(item, 0) + submission.agreed_price
-    
-    return "\n".join(f"- {item} (₦{value:,})" for item, value in sorted(items.items(), key=lambda x: x[1], reverse=True)[:n])
+
+def get_top_items_by_occurrences(submissions: List[Submission], attribute: str, n: int = 8) -> str:
+    """Get top n items based on occurrences."""
+    items = Counter(getattr(submission, attribute) for submission in submissions if getattr(submission, attribute))
+    return "\n".join(f"- {item} ({count})" for item, count in items.most_common(n))
 
 def generate_pricing_insights(submissions: List[Submission]) -> str:
     """Generate pricing insights."""
@@ -122,22 +118,22 @@ def update_main_readme(affiliates: Dict[str, List[Submission]]) -> None:
         all_submissions = [s for submissions in affiliates.values() for s in submissions]
         
         content = update_readme_section(content, "<!-- TOP KEY APPROACHES START -->", "<!-- TOP KEY APPROACHES END -->", 
-                                        get_top_items_by_value(all_submissions, 'key_approach'))
+                                        get_top_items_by_occurrences(all_submissions, 'key_approach'))
         
         content = update_readme_section(content, "<!-- TOP SUCCESSFUL STRATEGIES START -->", "<!-- TOP SUCCESSFUL STRATEGIES END -->", 
-                                        get_top_items_by_value(all_submissions, 'what_went_well'))
+                                        get_top_items_by_occurrences(all_submissions, 'what_went_well'))
         
         content = update_readme_section(content, "<!-- COMMON CLIENT TYPES START -->", "<!-- COMMON CLIENT TYPES END -->", 
-                                        "\n".join(f"- {item}" for item, _ in Counter(s.client_type for s in all_submissions).most_common(5)))
+                                        get_top_items_by_occurrences(all_submissions, 'client_type', 5))
         
         content = update_readme_section(content, "<!-- PRICING INSIGHTS START -->", "<!-- PRICING INSIGHTS END -->", 
                                         generate_pricing_insights(all_submissions))
         
         content = update_readme_section(content, "<!-- AREAS FOR IMPROVEMENT START -->", "<!-- AREAS FOR IMPROVEMENT END -->", 
-                                        "\n".join(f"- {item}" for item, _ in Counter(s.future_improvements for s in all_submissions).most_common(5)))
+                                        get_top_items_by_occurrences(all_submissions, 'future_improvements', 5))
         
         content = update_readme_section(content, "<!-- ADVICE FOR AFFILIATES START -->", "<!-- ADVICE FOR AFFILIATES END -->", 
-                                        "\n".join(f"- {item}" for item, _ in Counter(s.advice_for_others for s in all_submissions).most_common(5)))
+                                        get_top_items_by_occurrences(all_submissions, 'advice_for_others', 5))
         
         content = update_readme_section(content, "<!-- PROGRAM STATS START -->", "<!-- PROGRAM STATS END -->", generate_program_stats(affiliates))
 
@@ -170,11 +166,11 @@ def update_affiliate_readme(affiliate_tag: str, submissions: List[Submission]) -
     content += f"- Lowest Price: ₦{min(s.agreed_price for s in submissions):,}\n"
     content += f"- Most Common Client Type: {Counter(all_client_types).most_common(1)[0][0] if all_client_types else 'N/A'}\n"
 
-    content += "\n## Top 5 Key Approaches (by Agreed Price)\n"
-    content += get_top_items_by_value(submissions, 'key_approach', 5)
+    content += "\n## Top 5 Key Approaches (by Occurrences)\n"
+    content += get_top_items_by_occurrences(submissions, 'key_approach', 5)
 
-    content += "\n\n## Top 5 Successful Strategies (by Agreed Price)\n"
-    content += get_top_items_by_value(submissions, 'what_went_well', 5)
+    content += "\n\n## Top 5 Successful Strategies (by Occurrences)\n"
+    content += get_top_items_by_occurrences(submissions, 'what_went_well', 5)
 
     os.makedirs(os.path.dirname(readme_path), exist_ok=True)
     with open(readme_path, 'w', encoding='utf-8') as f:
