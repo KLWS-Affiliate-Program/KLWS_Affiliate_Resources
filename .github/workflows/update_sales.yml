@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: pip install pyyaml
       - name: Update sale summaries
-        run: python Sales_Logs/.github/scripts/update_summaries.py
+        run: python Sales_Logs/.github/scripts/update_sale_summaries.py
       - name: Commit changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

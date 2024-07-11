@@ -1,9 +1,10 @@
-name: Update Promotion Summaries
+name: Update Readme
 
 on:
   push:
     paths:
       - 'Promotion_Logs/affiliate_logs/**/*_submission.md'
+      - 'Sales_Logs/affiliate_logs/**/*_submission.md'
 
 jobs:
   update-summaries:
@@ -18,8 +19,8 @@ jobs:
           python-version: '3.x'
       - name: Install dependencies
         run: pip install pyyaml
-      - name: Update promotion summaries
-        run: python Promotion_Logs/.github/scripts/update_promo_summaries.py
+      - name: Update readme
+        run: python .github/scripts/update_readme.py
       - name: Commit changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -29,5 +30,5 @@ jobs:
           git add .
           git status
           git diff --staged
-          git commit -m "Update promotion readme" -a || echo "No changes to commit"
+          git commit -m "Update main readme" -a || echo "No changes to commit"
           git push -v https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
