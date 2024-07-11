@@ -1,6 +1,6 @@
 # Affiliate Promotion Referral Logs
 
-Welcome to APRL repository! This space is dedicated to tracking and sharing the achievements of our affiliates.
+Welcome to the APRL repository! This space is dedicated to tracking and sharing the achievements of our affiliates.
 
 ## About This Repository
 

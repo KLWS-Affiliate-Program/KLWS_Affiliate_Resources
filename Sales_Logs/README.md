@@ -1,6 +1,6 @@
-# Affiliate Sales Repository
+# Affiliate Sales Highlights
 
-Welcome to the Affiliate Sales Repository! This space is dedicated to tracking and analyzing the sales performance of our affiliates.
+Welcome to the ASH Repository! This space is dedicated to tracking and analyzing the sales performance of our affiliates.
 
 ## About This Repository
 
