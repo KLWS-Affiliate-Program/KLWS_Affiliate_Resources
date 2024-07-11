@@ -15,6 +15,7 @@ Below is an automatically updated list of our affiliate logs and their most rece
 |-----------|--------------------|--------------|
 | [kimora - 2](affiliate_logs/kimora_2) | [2024-07-08](affiliate_logs/kimora_2/2024-07-08_sale_submission.md) | ₦40,000 |
 | [gojo - 15](affiliate_logs/gojo_15) | [2024-07-11](affiliate_logs/gojo_15/2024-07-11_sale_submission.md) | ₦40,000 |
+| [loki - 13](affiliate_logs/loki_13) | [2024-07-11](affiliate_logs/loki_13/2024-07-11_sale_submission.md) | ₦40,000 |
 | [majesty - 14](affiliate_logs/majesty_14) | [2024-07-10](affiliate_logs/majesty_14/2024-07-10_sale_submission.md) | ₦35,000 |
 
 <!-- AFFILIATE LIST END -->
@@ -25,26 +26,27 @@ Below is an automatically updated list of our affiliate logs and their most rece
 <!-- TOP KEY APPROACHES START -->
 - the fact that i offered a low price to the client (₦40,000)
 - ease of service (₦40,000)
+- not much (₦40,000)
 - testing testing (₦35,000)
 <!-- TOP KEY APPROACHES END -->
 
 ### Top Successful Strategies (by Agreed Price)
 <!-- TOP SUCCESSFUL STRATEGIES START -->
+- testing testing (₦75,000)
 - nonya (₦40,000)
 - i spoke with confidence (₦40,000)
-- testing testing (₦35,000)
 <!-- TOP SUCCESSFUL STRATEGIES END -->
 
 ### Most Common Client Types
 <!-- COMMON CLIENT TYPES START -->
+- Schoolmate
 - Friend
 - Acquaintance
-- Schoolmate
 <!-- COMMON CLIENT TYPES END -->
 
 ### Pricing Insights
 <!-- PRICING INSIGHTS START -->
-On average, our affiliates price the service at ₦38,333.
+On average, our affiliates price the service at ₦38,750.
 <!-- PRICING INSIGHTS END -->
 
 ### Areas for Improvement
@@ -63,8 +65,8 @@ On average, our affiliates price the service at ₦38,333.
 
 ## Sales Log Statistics
 <!-- PROGRAM STATS START -->
-- Affiliates with Logs: 3
-- Total Submissions: 3
+- Affiliates with Logs: 4
+- Total Submissions: 4
 <!-- PROGRAM STATS END -->
 
 ## Support
