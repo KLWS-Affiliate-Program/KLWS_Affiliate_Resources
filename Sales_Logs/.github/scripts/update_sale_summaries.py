@@ -8,7 +8,7 @@ from collections import Counter
 # Define constants for commonly used paths and formats
 AFFILIATES_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'affiliate_logs')
 README_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', 'README.md')
-DATE_FORMAT = '%Y-%m-%d'
+DATE_FORMAT = '%Y-%m-%d-%H%M%S'
 
 # Define a structure for submission data
 class Submission(NamedTuple):
